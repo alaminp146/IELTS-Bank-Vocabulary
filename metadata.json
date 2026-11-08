@@ -1,0 +1,6 @@
+{
+  "name": "StickyVocab 900",
+  "description": "180-Day Bank Exam & IELTS Band 8.0+ Master Vocabulary App with corkboard sticky notes, mnemonics, MCQs, and offline practice",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

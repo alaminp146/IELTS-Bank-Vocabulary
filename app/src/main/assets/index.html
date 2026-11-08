@@ -1,0 +1,4030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>StickyVocab 900 — 180-Day Bank Exam & IELTS Band 8.0+ Master App</title>
+  <style>
+    :root {
+      --cork-bg: #f4efe6;
+      --cork-dot: #d8ccb8;
+      --board-border: #8c6d48;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --card-shadow: 0 10px 20px -5px rgba(50, 30, 10, 0.12), 0 4px 6px -2px rgba(50, 30, 10, 0.06);
+      --card-shadow-hover: 0 18px 30px -6px rgba(50, 30, 10, 0.22), 0 8px 10px -4px rgba(50, 30, 10, 0.10);
+      
+      /* Sticky Themes */
+      --sticky-yellow: #fef08a;
+      --sticky-yellow-dark: #fef9c3;
+      --sticky-yellow-border: #facc15;
+      
+      --sticky-mint: #bbf7d0;
+      --sticky-mint-dark: #dcfce7;
+      --sticky-mint-border: #86efac;
+      
+      --sticky-coral: #fecdd3;
+      --sticky-coral-dark: #ffe4e6;
+      --sticky-coral-border: #fda4af;
+      
+      --sticky-sky: #bae6fd;
+      --sticky-sky-dark: #e0f2fe;
+      --sticky-sky-border: #7dd3fc;
+      
+      --sticky-lavender: #e9d5ff;
+      --sticky-lavender-dark: #f3e8ff;
+      --sticky-lavender-border: #d8b4fe;
+      
+      --sticky-peach: #fed7aa;
+      --sticky-peach-dark: #ffedd5;
+      --sticky-peach-border: #fdba74;
+
+      --tape-color: rgba(255, 255, 255, 0.75);
+      --tape-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      
+      --nav-height: 64px;
+      --header-height: 68px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    /* Cozy Dark Lamp Mode */
+    body.dark-mode {
+      --cork-bg: #1c1917;
+      --cork-dot: #2e2824;
+      --board-border: #443729;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-light: #94a3b8;
+      --card-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.65), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+      --card-shadow-hover: 0 20px 32px -6px rgba(0, 0, 0, 0.85);
+
+      --sticky-yellow: #3a3212;
+      --sticky-yellow-dark: #29230a;
+      --sticky-yellow-border: #854d0e;
+
+      --sticky-mint: #133323;
+      --sticky-mint-dark: #0c2418;
+      --sticky-mint-border: #166534;
+
+      --sticky-coral: #3d171d;
+      --sticky-coral-dark: #2a0f14;
+      --sticky-coral-border: #9f1239;
+
+      --sticky-sky: #132f44;
+      --sticky-sky-dark: #0b1f2e;
+      --sticky-sky-border: #075985;
+
+      --sticky-lavender: #2c1a40;
+      --sticky-lavender-dark: #1e112c;
+      --sticky-lavender-border: #6b21a8;
+
+      --sticky-peach: #3b2210;
+      --sticky-peach-dark: #28170a;
+      --sticky-peach-border: #9a3412;
+
+      --tape-color: rgba(60, 50, 40, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hind Siliguri", "Plus Jakarta Sans", sans-serif;
+      background-color: var(--cork-bg);
+      background-image: radial-gradient(var(--cork-dot) 1.2px, transparent 1.2px);
+      background-size: 20px 20px;
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding-bottom: calc(var(--nav-height) + 30px);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Android Phone Frame Toggle Mode */
+    body.android-frame-mode {
+      background-color: #0f172a;
+      background-image: radial-gradient(#1e293b 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px 12px;
+    }
+
+    .app-viewport-shell {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body.android-frame-mode .app-viewport-shell {
+      max-width: 430px;
+      height: 900px;
+      min-height: 900px;
+      background-color: var(--cork-bg);
+      background-image: radial-gradient(var(--cork-dot) 1.2px, transparent 1.2px);
+      background-size: 20px 20px;
+      border-radius: 44px;
+      border: 12px solid #2d3748;
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.1);
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Simulated Phone Notch */
+    .phone-notch-bar {
+      display: none;
+    }
+    body.android-frame-mode .phone-notch-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 28px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.12);
+      backdrop-filter: blur(8px);
+    }
+    .phone-camera-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #0f172a;
+      border: 1.5px solid #334155;
+    }
+
+    /* Top Sticky Navigation Bar */
+    header.sticky-top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(244, 239, 230, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--board-border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    body.dark-mode header.sticky-top-bar {
+      background: rgba(28, 25, 23, 0.94);
+      border-bottom-color: #524233;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .brand-logo-pin {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 3px 8px rgba(217, 119, 6, 0.35);
+      flex-shrink: 0;
+    }
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      line-height: 1.15;
+      color: var(--text-main);
+    }
+    .brand-subtitle {
+      font-size: 11px;
+      font-weight: 600;
+      color: #d97706;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+    body.dark-mode .brand-subtitle {
+      color: #fbbf24;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-icon-square {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.7);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.18s ease;
+      flex-shrink: 0;
+    }
+    body.dark-mode .btn-icon-square {
+      background: rgba(45, 40, 36, 0.85);
+      border-color: rgba(255,255,255,0.12);
+      color: #f1f5f9;
+    }
+    .btn-icon-square:hover, .btn-icon-square:active {
+      transform: scale(1.05);
+      background: #f59e0b;
+      color: white;
+      border-color: #d97706;
+    }
+    .badge-mastery-counter {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #10b981;
+      color: white;
+      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.28);
+      white-space: nowrap;
+    }
+
+    /* Sub-header Navigation Tabs (for Desktop / tablet) */
+    .desktop-nav-tabs {
+      display: flex;
+      background: rgba(0,0,0,0.05);
+      padding: 4px;
+      border-radius: 12px;
+      gap: 4px;
+      margin-left: 8px;
+    }
+    body.dark-mode .desktop-nav-tabs {
+      background: rgba(255,255,255,0.06);
+    }
+    .desktop-nav-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .desktop-nav-btn.active {
+      background: white;
+      color: var(--text-main);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+    body.dark-mode .desktop-nav-btn.active {
+      background: #2a2420;
+      color: #f8fafc;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 820px) {
+      .desktop-nav-tabs {
+        display: none;
+      }
+    }
+
+    /* Main Container */
+    main.app-main {
+      padding: 16px 16px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Banner & Day Bar */
+    .daily-schedule-banner {
+      background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(254, 243, 199, 0.95));
+      border: 2px dashed #d97706;
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.3s ease;
+    }
+    body.dark-mode .daily-schedule-banner {
+      background: linear-gradient(135deg, #27211d, #2f2316);
+      border-color: #b45309;
+    }
+    .daily-banner-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .daily-banner-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .daily-banner-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .daily-banner-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .day-selector-select {
+      background: white;
+      border: 1.5px solid #cbd5e1;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      outline: none;
+      max-width: 280px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    body.dark-mode .day-selector-select {
+      background: #201c19;
+      border-color: #4b3e34;
+      color: #f1f5f9;
+    }
+
+    .btn-action-pill {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.12);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: all 0.18s ease;
+      touch-action: manipulation;
+    }
+    body.dark-mode .btn-action-pill {
+      background: #2b2420;
+      border-color: #4b3e34;
+      color: #f1f5f9;
+    }
+    .btn-action-pill:hover, .btn-action-pill:active {
+      transform: translateY(-1px);
+      background: #f59e0b;
+      color: white;
+      border-color: #d97706;
+    }
+    .btn-action-pill.primary {
+      background: #059669;
+      color: white;
+      border-color: #047857;
+    }
+    .btn-action-pill.primary:hover {
+      background: #047857;
+    }
+
+    /* Daily Reminder Quickbar */
+    .daily-reminder-quickbar {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1.5px solid rgba(217, 119, 6, 0.35);
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 3px 10px rgba(217, 119, 6, 0.08);
+      transition: all 0.3s ease;
+    }
+    body.dark-mode .daily-reminder-quickbar {
+      background: #251f1b;
+      border-color: rgba(251, 191, 36, 0.3);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+    }
+    .reminder-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .reminder-bell-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      color: #b45309;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 6px rgba(180, 83, 9, 0.15);
+      transition: opacity 0.2s ease;
+    }
+    body.dark-mode .reminder-bell-icon {
+      background: linear-gradient(135deg, #3b2816, #452c16);
+      color: #fde68a;
+    }
+    .reminder-text-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .reminder-bar-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .reminder-bar-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .reminder-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .time-input-pill {
+      background: white;
+      border: 1.5px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+    }
+    body.dark-mode .time-input-pill {
+      background: #1c1917;
+      border-color: #4b3e34;
+      color: #f1f5f9;
+    }
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #cbd5e1;
+      transition: .25s;
+      border-radius: 24px;
+    }
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .25s;
+      border-radius: 50%;
+    }
+    input:checked + .toggle-slider {
+      background-color: #10b981;
+    }
+    input:checked + .toggle-slider:before {
+      transform: translateX(20px);
+    }
+
+    /* 5-Card Responsive Corkboard Grid */
+    .sticky-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      margin-top: 10px;
+    }
+    @media (max-width: 480px) {
+      .sticky-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* Sticky Note Anatomy & Performance Optimization */
+    .sticky-card {
+      position: relative;
+      border-radius: 4px;
+      padding: 24px 20px 20px 20px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 1px solid rgba(255,255,255,0.7);
+      contain: layout style;
+      content-visibility: auto;
+      contain-intrinsic-size: auto 380px;
+      will-change: transform, box-shadow;
+      touch-action: manipulation;
+    }
+    .sticky-card:hover {
+      transform: translateY(-4px) rotate(0deg) !important;
+      box-shadow: var(--card-shadow-hover);
+      z-index: 10;
+    }
+    .btn-icon-square, .btn-sticky-action, .subtab-btn, .btn-mcq-option, .bottom-nav-item, .filter-chip {
+      touch-action: manipulation;
+    }
+
+    /* Folded Bottom-Right Corner Dog-Ear */
+    .sticky-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 22px 22px;
+      border-color: transparent transparent rgba(0, 0, 0, 0.18) transparent;
+      pointer-events: none;
+      transition: border-width 0.2s ease;
+    }
+    .sticky-card:hover::after {
+      border-width: 0 0 26px 26px;
+      border-color: transparent transparent rgba(0, 0, 0, 0.25) transparent;
+    }
+
+    /* Masking Tape Pin */
+    .sticky-pin {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--tape-color);
+      box-shadow: var(--tape-shadow);
+      padding: 3px 18px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #78350f;
+      border-radius: 2px;
+      border-left: 2px dashed rgba(0,0,0,0.15);
+      border-right: 2px dashed rgba(0,0,0,0.15);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 5;
+    }
+    body.dark-mode .sticky-pin {
+      color: #fde68a;
+    }
+
+    /* 6 Color Themes Cycling */
+    .sticky-card.theme-yellow {
+      background-color: var(--sticky-yellow);
+      border-left: 5px solid var(--sticky-yellow-border);
+    }
+    .sticky-card.theme-mint {
+      background-color: var(--sticky-mint);
+      border-left: 5px solid var(--sticky-mint-border);
+    }
+    .sticky-card.theme-coral {
+      background-color: var(--sticky-coral);
+      border-left: 5px solid var(--sticky-coral-border);
+    }
+    .sticky-card.theme-sky {
+      background-color: var(--sticky-sky);
+      border-left: 5px solid var(--sticky-sky-border);
+    }
+    .sticky-card.theme-lavender {
+      background-color: var(--sticky-lavender);
+      border-left: 5px solid var(--sticky-lavender-border);
+    }
+    .sticky-card.theme-peach {
+      background-color: var(--sticky-peach);
+      border-left: 5px solid var(--sticky-peach-border);
+    }
+
+    /* Organic Rotations */
+    .rot-0 { transform: rotate(-1.2deg); }
+    .rot-1 { transform: rotate(0.9deg); }
+    .rot-2 { transform: rotate(-0.7deg); }
+    .rot-3 { transform: rotate(1.1deg); }
+    .rot-4 { transform: rotate(-0.5deg); }
+
+    /* Sticky Card Header */
+    .sticky-card-toprow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .exam-tag-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+    }
+    body.dark-mode .exam-tag-badge {
+      background: rgba(255, 255, 255, 0.12);
+      color: #f1f5f9;
+    }
+
+    .sticky-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-sticky-action {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.7);
+      color: var(--text-main);
+      font-size: 15px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    body.dark-mode .btn-sticky-action {
+      background: rgba(0,0,0,0.35);
+      border-color: rgba(255,255,255,0.12);
+      color: #f8fafc;
+    }
+    .btn-sticky-action:hover {
+      transform: scale(1.12);
+      background: white;
+    }
+    .btn-sticky-action.active-star {
+      background: #f59e0b;
+      color: white;
+      border-color: #d97706;
+    }
+    .btn-sticky-action.active-mastered {
+      background: #059669;
+      color: white;
+      border-color: #047857;
+    }
+
+    /* Title Row */
+    .sticky-title-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+    .sticky-word {
+      font-size: 25px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+    .pos-tag {
+      font-style: italic;
+      font-size: 13px;
+      font-weight: 700;
+      color: #b45309;
+      background: rgba(180, 83, 9, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    body.dark-mode .pos-tag {
+      color: #fde68a;
+      background: rgba(253, 230, 138, 0.15);
+    }
+    .ipa-phonetic {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.2px;
+    }
+
+    /* Bilingual Meaning Box */
+    .bangla-box {
+      background: rgba(255, 255, 255, 0.78);
+      border-left: 4px solid #0f172a;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    }
+    body.dark-mode .bangla-box {
+      background: rgba(0, 0, 0, 0.35);
+      border-left-color: #fbbf24;
+    }
+    .bangla-box-bn {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
+    }
+    body.dark-mode .bangla-box-bn {
+      color: #fef08a;
+    }
+    .bangla-box-en {
+      font-size: 13px;
+      color: var(--text-main);
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    /* 4-Tab Switcher Inside Sticky Note */
+    .sticky-subtabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      background: rgba(0,0,0,0.08);
+      padding: 4px;
+      border-radius: 8px;
+    }
+    body.dark-mode .sticky-subtabs {
+      background: rgba(0,0,0,0.4);
+    }
+    .subtab-btn {
+      border: none;
+      background: transparent;
+      padding: 7px 4px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .subtab-btn.active {
+      background: white;
+      color: #0f172a;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    body.dark-mode .subtab-btn.active {
+      background: #332b25;
+      color: #f8fafc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    /* Subtab Content Panels */
+    .subtab-panel {
+      display: none;
+      background: rgba(255,255,255,0.65);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 13px;
+      line-height: 1.45;
+      min-height: 135px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.04);
+    }
+    body.dark-mode .subtab-panel {
+      background: rgba(0,0,0,0.25);
+    }
+    .subtab-panel.active {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 1. Memory Trick Panel */
+    .mnemonic-header {
+      font-size: 11px;
+      font-weight: 800;
+      color: #b45309;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    body.dark-mode .mnemonic-header {
+      color: #f59e0b;
+    }
+    .mnemonic-text {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+    .source-citation {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-style: italic;
+      border-top: 1px dashed rgba(0,0,0,0.12);
+      padding-top: 6px;
+    }
+    body.dark-mode .source-citation {
+      border-top-color: rgba(255,255,255,0.1);
+    }
+
+    /* 2. IELTS Band 8 Panel */
+    .ielts-topic-header {
+      font-size: 11px;
+      font-weight: 800;
+      color: #4f46e5;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    body.dark-mode .ielts-topic-header {
+      color: #a5b4fc;
+    }
+    .ielts-box-band6 {
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      background: rgba(239, 68, 68, 0.10);
+      border-radius: 6px;
+      padding: 7px 10px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .ielts-box-band8 {
+      border: 1.5px solid rgba(16, 185, 129, 0.5);
+      background: rgba(16, 185, 129, 0.14);
+      border-radius: 6px;
+      padding: 7px 10px;
+      font-size: 12.5px;
+    }
+    .band-label {
+      font-weight: 800;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .band-label.red { color: #dc2626; }
+    .band-label.green { color: #059669; }
+
+    /* 3. Exam MCQ Panel */
+    .mcq-question-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0284c7;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .mcq-question-text {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .mcq-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .btn-mcq-option {
+      background: white;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s ease;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    body.dark-mode .btn-mcq-option {
+      background: #2a2420;
+      border-color: rgba(255,255,255,0.15);
+      color: #f1f5f9;
+    }
+    .btn-mcq-option:hover {
+      border-color: #0284c7;
+      transform: translateY(-1px);
+    }
+    .btn-mcq-option.correct {
+      background: #059669 !important;
+      color: white !important;
+      border-color: #047857 !important;
+    }
+    .btn-mcq-option.wrong {
+      background: #e11d48 !important;
+      color: white !important;
+      border-color: #be123c !important;
+    }
+    .mcq-explanation-box {
+      display: none;
+      background: rgba(255,255,255,0.9);
+      border-left: 3px solid #059669;
+      border-radius: 4px;
+      padding: 6px 8px;
+      font-size: 11.5px;
+      line-height: 1.4;
+      color: var(--text-main);
+    }
+    body.dark-mode .mcq-explanation-box {
+      background: rgba(0,0,0,0.4);
+      border-left-color: #34d399;
+    }
+
+    /* 4. Word Cluster Panel */
+    .cluster-section {
+      margin-bottom: 6px;
+    }
+    .cluster-title {
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .cluster-pills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .cluster-pill {
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(0,0,0,0.06);
+    }
+    body.dark-mode .cluster-pill {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Scribble Box (Personal sentence note) */
+    .scribble-box {
+      width: 100%;
+      background: rgba(255,255,255,0.5);
+      border: 1.5px dashed rgba(0,0,0,0.22);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    body.dark-mode .scribble-box {
+      background: rgba(0,0,0,0.25);
+      border-color: rgba(255,255,255,0.2);
+      color: #f1f5f9;
+    }
+    .scribble-box:focus {
+      background: white;
+      border-color: #d97706;
+      border-style: solid;
+      box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
+    }
+    body.dark-mode .scribble-box:focus {
+      background: #251f1b;
+      border-color: #fbbf24;
+    }
+
+    /* Fixed Android Bottom Navigation Bar */
+    nav.android-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      background: rgba(244, 239, 230, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 2px solid var(--board-border);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 8px;
+      z-index: 950;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    body.dark-mode nav.android-bottom-nav {
+      background: rgba(28, 25, 23, 0.96);
+      border-top-color: #524233;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
+    }
+    body.android-frame-mode nav.android-bottom-nav {
+      position: sticky;
+      bottom: 0;
+      border-radius: 0 0 32px 32px;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .bottom-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 12px;
+      transition: all 0.15s ease;
+      min-width: 60px;
+    }
+    .bottom-nav-item .nav-icon {
+      font-size: 19px;
+      line-height: 1;
+    }
+    .bottom-nav-item .nav-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .bottom-nav-item.active {
+      color: #d97706;
+      background: rgba(217, 119, 6, 0.12);
+    }
+    body.dark-mode .bottom-nav-item.active {
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.15);
+    }
+
+    /* Views Architecture */
+    .view-container {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+    .view-container.active-view {
+      display: block;
+    }
+
+    /* View: Full Corkboard (view-wall) */
+    .wall-controls-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    body.dark-mode .wall-controls-card {
+      background: #251f1b;
+      border: 1px solid #443729;
+    }
+    .search-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,0,0,0.04);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(0,0,0,0.1);
+    }
+    body.dark-mode .search-input-wrap {
+      background: #1c1917;
+      border-color: #3b3026;
+    }
+    .search-input-field {
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+    .filter-chips-scroll {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+    .filter-chip {
+      background: rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    body.dark-mode .filter-chip {
+      background: #1c1917;
+      border-color: #3b3026;
+      color: #94a3b8;
+    }
+    .filter-chip.active {
+      background: #f59e0b;
+      color: white;
+      border-color: #d97706;
+      font-weight: 700;
+    }
+
+    .wall-pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding: 12px;
+      background: white;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--card-shadow);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    body.dark-mode .wall-pagination-bar {
+      background: #251f1b;
+      border: 1px solid #443729;
+    }
+
+    /* View: Master Table (view-list) */
+    .master-table-card {
+      background: white;
+      border-radius: var(--radius-md);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+    body.dark-mode .master-table-card {
+      background: #251f1b;
+      border: 1px solid #443729;
+    }
+    .table-responsive {
+      overflow-x: auto;
+      width: 100%;
+    }
+    table.master-vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+    table.master-vocab-table th {
+      background: #f8fafc;
+      padding: 12px 14px;
+      font-weight: 700;
+      border-bottom: 2px solid #e2e8f0;
+      white-space: nowrap;
+      color: var(--text-muted);
+    }
+    body.dark-mode table.master-vocab-table th {
+      background: #1c1917;
+      border-bottom-color: #3b3026;
+      color: #94a3b8;
+    }
+    table.master-vocab-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+    body.dark-mode table.master-vocab-table td {
+      border-bottom-color: #2e2620;
+    }
+    table.master-vocab-table tr:hover {
+      background: #fffbeb;
+      cursor: pointer;
+    }
+    body.dark-mode table.master-vocab-table tr:hover {
+      background: #312821;
+    }
+    .day-header-row td {
+      background: #fef3c7 !important;
+      font-weight: 800;
+      color: #92400e;
+      border-top: 2px solid #fde68a;
+    }
+    body.dark-mode .day-header-row td {
+      background: #3b2816 !important;
+      color: #fde68a;
+      border-top-color: #633e14;
+    }
+
+    /* View: 60s Pop Quiz (view-quiz) */
+    .quiz-container-box {
+      max-width: 650px;
+      margin: 0 auto;
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      border: 3px solid #f59e0b;
+    }
+    body.dark-mode .quiz-container-box {
+      background: #251f1b;
+      border-color: #d97706;
+    }
+    .quiz-top-stats {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px dashed #e2e8f0;
+    }
+    body.dark-mode .quiz-top-stats {
+      border-bottom-color: #3b3026;
+    }
+    .timer-pill {
+      background: #fee2e2;
+      color: #dc2626;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .streak-pill {
+      background: #fef3c7;
+      color: #b45309;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* View: Pin / Bulk Import / Gemini (view-add) */
+    .add-view-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
+    .form-panel-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+      border-top: 4px solid #f59e0b;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    body.dark-mode .form-panel-card {
+      background: #251f1b;
+      border: 1px solid #443729;
+      border-top: 4px solid #f59e0b;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .form-control {
+      background: rgba(0,0,0,0.03);
+      border: 1.5px solid #cbd5e1;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+      font-family: inherit;
+    }
+    body.dark-mode .form-control {
+      background: #1c1917;
+      border-color: #4b3e34;
+      color: #f1f5f9;
+    }
+    .form-control:focus {
+      border-color: #f59e0b;
+      background: white;
+    }
+    body.dark-mode .form-control:focus {
+      background: #201c19;
+    }
+    textarea.form-control {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    /* Modal dialog */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      z-index: 1100;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.active {
+      display: flex;
+    }
+    .modal-box {
+      background: white;
+      border-radius: var(--radius-md);
+      max-width: 500px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+      position: relative;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+    body.dark-mode .modal-box {
+      background: #251f1b;
+      border: 1px solid #443729;
+    }
+
+    /* Floating Toast */
+    .toast-popup {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+      background: #0f172a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 1200;
+    }
+    .toast-popup.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-viewport-shell">
+  <!-- Phone Notch in Frame Preview -->
+  <div class="phone-notch-bar">
+    <div class="phone-camera-dot"></div>
+  </div>
+
+  <!-- Top Navigation & App Bar -->
+  <header class="sticky-top-bar">
+    <div class="brand-wrap" onclick="switchView('view-daily')">
+      <div class="brand-logo-pin">📌</div>
+      <div class="brand-titles">
+        <h1 class="brand-title">StickyVocab 900</h1>
+        <span class="brand-subtitle">180-Day Bank & IELTS Master</span>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-nav-tabs">
+      <button class="desktop-nav-btn active" data-view="view-daily" onclick="switchView('view-daily')">🌟 Today</button>
+      <button class="desktop-nav-btn" data-view="view-wall" onclick="switchView('view-wall')">📋 Corkboard</button>
+      <button class="desktop-nav-btn" data-view="view-list" onclick="switchView('view-list')">📑 180-Day Table</button>
+      <button class="desktop-nav-btn" data-view="view-quiz" onclick="switchView('view-quiz')">⚡ Pop Quiz</button>
+      <button class="desktop-nav-btn" data-view="view-add" onclick="switchView('view-add')">➕ Import / Add</button>
+    </nav>
+
+    <!-- Header Tools & Toggles -->
+    <div class="header-controls">
+      <div class="badge-mastery-counter" id="headerMasteryBadge" title="Mastered Progress">0 / 900 ✅</div>
+      <button class="btn-icon-square" id="btnReminderModal" title="Daily Notification Reminder Time" onclick="openReminderModal()">⏰</button>
+      <button class="btn-icon-square" id="btnPhoneFrame" title="Toggle Android Phone Frame" onclick="togglePhoneFrame()">📱</button>
+      <button class="btn-icon-square" id="btnThemeToggle" title="Toggle Cozy Lamp Dark Mode" onclick="toggleDarkMode()">🌙</button>
+      <button class="btn-icon-square" id="btnStatsModal" title="Learning Analytics" onclick="openStatsModal()">📊</button>
+    </div>
+  </header>
+
+  <!-- Main View Area -->
+  <main class="app-main">
+
+    <!-- VIEW 1: TODAY'S 5 STICKY NOTES -->
+    <div id="view-daily" class="view-container active-view">
+      <div class="daily-schedule-banner">
+        <div class="daily-banner-info">
+          <div class="daily-banner-title">
+            <span id="currentDayDisplay">Day 1 of 180</span>
+            <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(5 Words / Day Quota)</span>
+          </div>
+          <div class="daily-banner-sub" id="dailyBannerProgressSummary">Showing Words 1 – 5 • 0 of 5 Mastered Today</div>
+        </div>
+
+        <div class="daily-banner-actions">
+          <button class="btn-action-pill" onclick="changeDay(-1)" title="Previous Day">◀ Prev Day</button>
+          <select id="daySelectorDropdown" class="day-selector-select" onchange="onDayDropdownSelect(this.value)">
+            <!-- Options populated dynamically -->
+          </select>
+          <button class="btn-action-pill" onclick="changeDay(1)" title="Next Day">Next Day ▶</button>
+          <button class="btn-action-pill" onclick="surpriseRandomDay()" title="Shuffle random 5 words">🎲 Surprise 5</button>
+          <button class="btn-action-pill primary" onclick="markAllCurrentDayMastered()" title="Mark all 5 words as mastered">✅ Mark 5 Mastered</button>
+        </div>
+      </div>
+
+      <!-- Daily Notification Reminder Bar -->
+      <div class="daily-reminder-quickbar" id="dailyReminderBar">
+        <div class="reminder-bar-left">
+          <div class="reminder-bell-icon" id="reminderBellIcon">🔔</div>
+          <div class="reminder-text-col">
+            <div class="reminder-bar-title" id="reminderBarStatusText">Daily Study Reminder: 08:30 AM</div>
+            <div class="reminder-bar-sub" id="reminderBarSubText">Fires a notification every day with your scheduled 5 words</div>
+          </div>
+        </div>
+        <div class="reminder-bar-actions">
+          <input type="time" id="quickReminderTimeInput" class="time-input-pill" value="08:30" title="Set Reminder Time" onchange="onQuickReminderTimeChange(this.value)">
+          <button class="btn-action-pill" onclick="openReminderModal()" title="Customize Reminder Settings">⏰ Settings</button>
+          <button class="btn-action-pill primary" onclick="triggerTestReminderNotification()" title="Test notification now">🔔 Test</button>
+        </div>
+      </div>
+
+      <!-- 5-Card Responsive Daily Sticky Grid -->
+      <div class="sticky-cards-grid" id="dailyStickyGrid">
+        <!-- Dynamically rendered 5 sticky note cards -->
+      </div>
+    </div>
+
+    <!-- VIEW 2: FULL CORKBOARD WALL -->
+    <div id="view-wall" class="view-container">
+      <div class="wall-controls-card">
+        <div class="search-input-wrap">
+          <span>🔍</span>
+          <input type="text" id="wallSearchInput" class="search-input-field" placeholder="Search 900 bank vocabulary, Bangla meaning, exam tags, IELTS upgrades, or mnemonics..." oninput="onWallSearchChange()">
+          <button id="btnClearSearch" style="border:none; background:transparent; cursor:pointer; color:var(--text-muted); display:none;" onclick="clearWallSearch()">✖</button>
+        </div>
+
+        <div class="filter-chips-scroll">
+          <button class="filter-chip active" data-filter="all" onclick="setWallFilter('all')">All Words</button>
+          <button class="filter-chip" data-filter="exam-hot" onclick="setWallFilter('exam-hot')">🔥 Most Repeated in Exams</button>
+          <button class="filter-chip" data-filter="ielts-writing" onclick="setWallFilter('ielts-writing')">✍️ IELTS Writing Task 2</button>
+          <button class="filter-chip" data-filter="ielts-speaking" onclick="setWallFilter('ielts-speaking')">🗣️ IELTS Speaking & Tone</button>
+          <button class="filter-chip" data-filter="starred" onclick="setWallFilter('starred')">⭐ Starred</button>
+          <button class="filter-chip" data-filter="mastered" onclick="setWallFilter('mastered')">✅ Mastered</button>
+          <button class="filter-chip" data-filter="unmastered" onclick="setWallFilter('unmastered')">⏳ Unmastered</button>
+        </div>
+      </div>
+
+      <div class="sticky-cards-grid" id="wallStickyGrid">
+        <!-- Rendered filtered & paginated sticky cards -->
+      </div>
+
+      <!-- Pagination for smooth performance -->
+      <div class="wall-pagination-bar" id="wallPaginationBar">
+        <button class="btn-action-pill" id="btnWallPrev" onclick="changeWallPage(-1)">◀ Previous</button>
+        <span id="wallPageIndicator">Page 1 of 1</span>
+        <button class="btn-action-pill" id="btnWallNext" onclick="changeWallPage(1)">Next ▶</button>
+      </div>
+    </div>
+
+    <!-- VIEW 3: 180-DAY MASTER TABLE -->
+    <div id="view-list" class="view-container">
+      <div class="wall-controls-card" style="margin-bottom: 14px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h2 style="font-size: 17px; font-weight:800;">📑 180-Day Master Curriculum Table</h2>
+            <p style="font-size:12px; color:var(--text-muted);">Organized by 5 words per day. Click any row to jump to that day's 5 sticky notes.</p>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <input type="text" id="tableFilterInput" class="form-control" style="width:220px;" placeholder="Filter table words..." oninput="renderMasterTable()">
+          </div>
+        </div>
+      </div>
+
+      <div class="master-table-card">
+        <div class="table-responsive">
+          <table class="master-vocab-table">
+            <thead>
+              <tr>
+                <th style="width: 70px;">Day</th>
+                <th style="width: 170px;">Word & POS</th>
+                <th style="width: 200px;">Bangla & English</th>
+                <th>Memory Trick</th>
+                <th>Synonyms</th>
+                <th style="width: 90px; text-align:center;">Status</th>
+              </tr>
+            </thead>
+            <tbody id="masterTableBody">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 4: 60-SECOND STICKY POP QUIZ -->
+    <div id="view-quiz" class="view-container">
+      <div class="quiz-container-box">
+        <div class="quiz-top-stats">
+          <div class="timer-pill" id="quizTimerDisplay">⏱️ 60s</div>
+          <div class="streak-pill" id="quizStreakDisplay">🔥 Streak: 0</div>
+          <div style="font-weight: 800; font-size:14px;" id="quizScoreDisplay">Score: 0</div>
+        </div>
+
+        <div id="quizCardContent">
+          <!-- Populated with MCQ or Bangla Cloze question -->
+        </div>
+
+        <div style="margin-top: 18px; display: flex; justify-content: space-between; align-items:center;">
+          <button class="btn-action-pill" onclick="startNewQuizRound()">🔄 Restart 60s Quiz</button>
+          <span style="font-size:11px; color:var(--text-muted);">Based on Bangladesh Bank Exams & IELTS Band 8.0+</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 5: PIN SINGLE / BULK IMPORT / GEMINI BATCH GENERATOR -->
+    <div id="view-add" class="view-container">
+      <div class="add-view-grid">
+        <!-- Card 1: Add Custom Word -->
+        <div class="form-panel-card">
+          <h2 style="font-size:16px; font-weight:800;">📌 Pin Custom Vocabulary Card</h2>
+          <p style="font-size:12px; color:var(--text-muted);">Add your own high-yield word. It will automatically be assigned to the next available Day in the 180-Day schedule.</p>
+
+          <form id="singleWordForm" onsubmit="handleSingleWordSubmit(event)">
+            <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px;">
+              <div class="form-group">
+                <label>Word (Uppercase)</label>
+                <input type="text" id="addWord" class="form-control" placeholder="e.g. SAGACIOUS" required>
+              </div>
+              <div class="form-group">
+                <label>Part of Speech</label>
+                <select id="addPos" class="form-control">
+                  <option value="adj">adjective</option>
+                  <option value="verb">verb</option>
+                  <option value="noun">noun</option>
+                  <option value="adv">adverb</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px;">
+              <div class="form-group">
+                <label>IPA Phonetic</label>
+                <input type="text" id="addIpa" class="form-control" placeholder="/səˈɡeɪ.ʃəs/">
+              </div>
+              <div class="form-group">
+                <label>Exam / Tag Badge</label>
+                <input type="text" id="addTag" class="form-control" placeholder="🔥 BB AD '19">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top:10px;">
+              <label>🇧🇩 Bangla Meaning (Bold)</label>
+              <input type="text" id="addBangla" class="form-control" placeholder="দূরদর্শী; সুবিচক্ষণ" required>
+            </div>
+
+            <div class="form-group" style="margin-top:10px;">
+              <label>English Definition</label>
+              <input type="text" id="addEnglish" class="form-control" placeholder="Having or showing keen mental discernment and good judgment" required>
+            </div>
+
+            <div class="form-group" style="margin-top:10px;">
+              <label>🧠 Mnemonic Trick</label>
+              <textarea id="addMnemonic" class="form-control" style="min-height:55px;" placeholder="💡 SAGA + PRECIOUS: A wise sage who gives precious advice"></textarea>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px;">
+              <div class="form-group">
+                <label>Synonyms (comma-separated)</label>
+                <input type="text" id="addSynonyms" class="form-control" placeholder="astute, shrewd, perceptive">
+              </div>
+              <div class="form-group">
+                <label>Antonyms (comma-separated)</label>
+                <input type="text" id="addAntonyms" class="form-control" placeholder="foolish, obtuse, naive">
+              </div>
+            </div>
+
+            <button type="submit" class="btn-action-pill primary" style="width:100%; margin-top:14px; justify-content:center;">📌 Pin to Corkboard</button>
+          </form>
+        </div>
+
+        <!-- Card 2: Bulk JSON Import & Export -->
+        <div class="form-panel-card">
+          <h2 style="font-size:16px; font-weight:800;">📦 Bulk JSON Importer & Exporter</h2>
+          <p style="font-size:12px; color:var(--text-muted);">Paste or upload a JSON array of word objects. They will merge directly into your 900-Word local database and auto-assign days (`Math.ceil(id/5)`).</p>
+
+          <div class="form-group">
+            <label>Upload .json file</label>
+            <input type="file" id="jsonFileInput" accept=".json" class="form-control" onchange="handleJsonFileUpload(event)">
+          </div>
+
+          <div class="form-group">
+            <label>Or Paste JSON Array</label>
+            <textarea id="bulkJsonTextarea" class="form-control" style="min-height:120px; font-family:monospace; font-size:11px;" placeholder='[
+  {
+    "word": "EPITOME",
+    "pos": "noun",
+    "ipa": "/ɪˈpɪt.ə.mi/",
+    "bangla": "মূর্ত প্রতীক; সংক্ষিপ্তসার",
+    "english": "A perfect example of a particular quality or type",
+    "mnemonic": "💡 EPI + TOME: A poem summarizing an entire huge tome",
+    "synonyms": "embodiment, quintessence, archetype",
+    "antonyms": "antithesis, anomaly"
+  }
+]'></textarea>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="btn-action-pill primary" onclick="handleMergeBatchJson()">📥 Merge Batch into 900-Word DB</button>
+            <button class="btn-action-pill" onclick="exportFullDatabaseJson()">📤 Export Full Backup (.json)</button>
+            <button class="btn-action-pill" style="color:#dc2626;" onclick="resetToInitialSeeds()">🔄 Reset to Defaults</button>
+          </div>
+        </div>
+
+        <!-- Card 3: Gemini API Batch Generator -->
+        <div class="form-panel-card" style="border-top-color: #8b5cf6;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:20px;">✨</span>
+            <h2 style="font-size:16px; font-weight:800;">Auto-Generate Next 5 Days (25 Words) via Gemini API</h2>
+          </div>
+          <p style="font-size:12px; color:var(--text-muted);">Uses Google Gemini AI (`gemini-2.5-flash`) to generate authentic high-frequency Bangladesh Bank Exam & IELTS Band 8.0+ vocabulary cards complete with mnemonics, Bangla meanings, and MCQs.</p>
+
+          <div class="form-group">
+            <label>Gemini API Key (Optional if pre-configured)</label>
+            <input type="password" id="geminiApiKeyInput" class="form-control" placeholder="Enter Gemini API Key (or configure in Secrets)">
+          </div>
+
+          <div class="form-group">
+            <label>Target Words Count</label>
+            <select id="geminiBatchCount" class="form-control">
+              <option value="5">Next 1 Day (5 Words)</option>
+              <option value="15">Next 3 Days (15 Words)</option>
+              <option value="25" selected>Next 5 Days (25 Words)</option>
+            </select>
+          </div>
+
+          <button id="btnRunGeminiGen" class="btn-action-pill" style="background:#7c3aed; color:white; border-color:#6d28d9; justify-content:center;" onclick="generateWordsWithGemini()">
+            🤖 Auto-Generate & Merge into DB
+          </button>
+          <div id="geminiStatusMsg" style="font-size:12px; font-weight:600; color:var(--text-muted); display:none;"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Fixed Android Bottom Navigation Bar -->
+  <nav class="android-bottom-nav">
+    <button class="bottom-nav-item active" data-view="view-daily" onclick="switchView('view-daily')">
+      <span class="nav-icon">🌟</span>
+      <span class="nav-label">Today</span>
+    </button>
+    <button class="bottom-nav-item" data-view="view-wall" onclick="switchView('view-wall')">
+      <span class="nav-icon">📋</span>
+      <span class="nav-label">Corkboard</span>
+    </button>
+    <button class="bottom-nav-item" data-view="view-list" onclick="switchView('view-list')">
+      <span class="nav-icon">📑</span>
+      <span class="nav-label">180 Days</span>
+    </button>
+    <button class="bottom-nav-item" data-view="view-quiz" onclick="switchView('view-quiz')">
+      <span class="nav-icon">⚡</span>
+      <span class="nav-label">Pop Quiz</span>
+    </button>
+    <button class="bottom-nav-item" data-view="view-add" onclick="switchView('view-add')">
+      <span class="nav-icon">➕</span>
+      <span class="nav-label">Import</span>
+    </button>
+  </nav>
+
+</div>
+
+<!-- Stats & Analytics Modal -->
+<div class="modal-backdrop" id="statsModalBackdrop" onclick="closeStatsModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <h3 style="font-size:17px; font-weight:800;">📊 Learning Analytics & Mastery</h3>
+      <button onclick="closeStatsModalDirect()" style="border:none; background:transparent; font-size:18px; cursor:pointer;">✖</button>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:16px;">
+      <div style="background:rgba(16, 185, 129, 0.1); border:1.5px solid #10b981; border-radius:10px; padding:12px; text-align:center;">
+        <div style="font-size:24px; font-weight:900; color:#059669;" id="statMasteredCount">0</div>
+        <div style="font-size:11px; font-weight:700; color:#065f46;">WORDS MASTERED</div>
+      </div>
+      <div style="background:rgba(245, 158, 11, 0.1); border:1.5px solid #f59e0b; border-radius:10px; padding:12px; text-align:center;">
+        <div style="font-size:24px; font-weight:900; color:#d97706;" id="statStarredCount">0</div>
+        <div style="font-size:11px; font-weight:700; color:#92400e;">STARRED FOR REVISION</div>
+      </div>
+    </div>
+
+    <div style="background:rgba(0,0,0,0.04); border-radius:10px; padding:12px; margin-bottom:16px;">
+      <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700; margin-bottom:6px;">
+        <span>180-Day Curriculum Completion</span>
+        <span id="statCurriculumPercent">0%</span>
+      </div>
+      <div style="height:10px; background:#e2e8f0; border-radius:5px; overflow:hidden;">
+        <div id="statProgressBar" style="width:0%; height:100%; background:linear-gradient(90deg, #10b981, #059669); transition:width 0.4s ease;"></div>
+      </div>
+      <div style="font-size:11px; color:var(--text-muted); margin-top:6px;" id="statWordsTotalDesc">0 of 900 Words Completed</div>
+    </div>
+
+    <div style="font-size:12px; line-height:1.5; color:var(--text-muted);">
+      💡 <b>Preparation Rule:</b> Retain 5 words every day for 180 days to master all 900 high-frequency Bangladesh Bank officer recruitment & IELTS Band 8.0+ collocations.
+    </div>
+
+    <button class="btn-action-pill primary" style="width:100%; margin-top:16px; justify-content:center;" onclick="closeStatsModalDirect()">Continue Studying</button>
+  </div>
+</div>
+
+<!-- Daily Reminder Settings Modal -->
+<div class="modal-backdrop" id="reminderModalBackdrop" onclick="closeReminderModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="font-size:22px;">⏰</span>
+        <h3 style="font-size:17px; font-weight:800;">Daily Study Reminder</h3>
+      </div>
+      <button onclick="closeReminderModalDirect()" style="border:none; background:transparent; font-size:18px; cursor:pointer;">✖</button>
+    </div>
+
+    <div style="background:rgba(245, 158, 11, 0.1); border:1.5px solid #f59e0b; border-radius:10px; padding:12px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <div style="font-size:14px; font-weight:800; color:var(--text-main);">Daily Push Notification</div>
+        <div style="font-size:11.5px; color:var(--text-muted);">Alert with today's 5 words to keep your 180-day streak</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="modalReminderToggle" onchange="toggleDailyReminder(this.checked)" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="form-group" style="margin-bottom:14px;">
+      <label style="font-size:12px; font-weight:700;">Scheduled Notification Time</label>
+      <input type="time" id="modalReminderTimeInput" class="form-control" style="font-size:18px; font-weight:800; text-align:center; padding:10px;" value="08:30" onchange="onReminderTimeInputChange(this.value)">
+    </div>
+
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px; font-weight:700; display:block; margin-bottom:6px;">⚡ Quick Presets</label>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px;">
+        <button class="btn-action-pill" style="justify-content:center;" onclick="setReminderPreset('08:00')">🌅 Morning 8:00 AM</button>
+        <button class="btn-action-pill" style="justify-content:center;" onclick="setReminderPreset('13:00')">☕ Lunch 1:00 PM</button>
+        <button class="btn-action-pill" style="justify-content:center;" onclick="setReminderPreset('19:00')">🌆 Evening 7:00 PM</button>
+        <button class="btn-action-pill" style="justify-content:center;" onclick="setReminderPreset('21:30')">🌙 Night 9:30 PM</button>
+      </div>
+    </div>
+
+    <div style="background:rgba(0,0,0,0.04); border-radius:10px; padding:12px; margin-bottom:16px;">
+      <div style="font-size:11px; font-weight:800; color:var(--text-muted); text-transform:uppercase; margin-bottom:4px;">Today's Notification Preview</div>
+      <div style="font-size:12.5px; font-weight:700; color:var(--text-main); line-height:1.4;" id="reminderPreviewText">
+        📌 StickyVocab 900: Day 1 Ready! Words: MITIGATE, EXACERBATE, UBIQUITOUS...
+      </div>
+    </div>
+
+    <div style="display:flex; gap:8px;">
+      <button class="btn-action-pill primary" style="flex:1; justify-content:center;" onclick="triggerTestReminderNotification()">🔔 Test Notification</button>
+      <button class="btn-action-pill" style="flex:1; justify-content:center;" onclick="closeReminderModalDirect()">Save & Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Toast -->
+<div class="toast-popup" id="toastPopup">
+  <span id="toastIcon">✨</span>
+  <span id="toastMsg">Action completed!</span>
+</div>
+
+<script>
+/**
+ * StickyVocab 900 — Complete 180-Day Bank Exam & IELTS Band 8.0+ Master App
+ * 100% Offline-capable, zero external dependencies, robust LocalStorage sync.
+ */
+
+const WORDS_PER_DAY = 5;
+const TOTAL_GOAL_WORDS = 900;
+const STORAGE_KEY_WORDS = 'stickyvocab_words_data_v2';
+const STORAGE_KEY_MASTERED = 'stickyvocab_mastered_ids';
+const STORAGE_KEY_STARRED = 'stickyvocab_starred_ids';
+const STORAGE_KEY_SCRIBBLES = 'stickyvocab_scribbles_map';
+const STORAGE_KEY_CURRENT_DAY = 'stickyvocab_current_day';
+const STORAGE_KEY_THEME = 'stickyvocab_lamp_theme';
+const STORAGE_KEY_PHONE_FRAME = 'stickyvocab_phone_frame_mode';
+const STORAGE_KEY_GEMINI_KEY = 'stickyvocab_gemini_api_key';
+const STORAGE_KEY_REMINDER_TIME = 'stickyvocab_reminder_time';
+const STORAGE_KEY_REMINDER_ENABLED = 'stickyvocab_reminder_enabled';
+const STORAGE_KEY_LAST_REMINDER_DATE = 'stickyvocab_last_reminder_date';
+
+// 6 Colorful Sticky Themes that cycle across the 5 daily cards
+const STICKY_THEMES = ['theme-yellow', 'theme-mint', 'theme-coral', 'theme-sky', 'theme-lavender', 'theme-peach'];
+
+// Initial High-Yield Seed Data: 30 Complete Pack 2 Words (Days 1 to 6) + Bank Exam Real Test Paper Extra Words
+const INITIAL_WORDS = [
+  // DAY 1 (Words 1 - 5)
+  {
+    id: 1,
+    word: "MITIGATE",
+    pos: "verb",
+    ipa: "/ˈmɪt.ɪ.ɡeɪt/",
+    tag: "🔥 Bangladesh Bank AD '18",
+    bangla: "উপশম করা; তীব্রতা হ্রাস করা",
+    english: "To make something less severe, harmful, or painful",
+    mnemonic: "💡 MITI (মাটি) + GATE: গেটে মাটি ফেলে বন্যার পানির তীব্রতা উপশম করা হলো।",
+    source: "One Bank Ltd. SCO 2017 & Pubali Bank SO",
+    ieltsTopic: "Environment & Urban Policy",
+    band6: "Governments should try to reduce climate change problems.",
+    band8: "Targeted reforestation serves to mitigate the catastrophic ramifications of carbon emissions.",
+    mcq: {
+      question: "Which of the following is the nearest SYNONYM of 'MITIGATE'?",
+      options: ["Exacerbate", "Alleviate", "Prolong", "Instigate"],
+      answer: 1,
+      explanation: "💡 Alleviate মানে উপশম বা লাঘব করা। অপরদিকে Exacerbate হলো তীব্রতা বৃদ্ধি করা।"
+    },
+    synonyms: "alleviate, palliate, assuage, abate, attenuate",
+    antonyms: "exacerbate, aggravate, intensify, worsen"
+  },
+  {
+    id: 2,
+    word: "EXACERBATE",
+    pos: "verb",
+    ipa: "/ɪɡˈzæs.ə.beɪt/",
+    tag: "🔥 Sonali Bank Officer '19",
+    bangla: "অধিকতর খারাপ বা তিক্ত করে তোলা",
+    english: "To make a problem, bad situation, or negative feeling worse",
+    mnemonic: "💡 EX + ACER (Acid): আগুনে এসিড বা ঘি ঢাললে যেমন পরিস্থিতি আরও খারাপ হয়।",
+    source: "Recent Publications Bank Vocabulary Test Paper",
+    ieltsTopic: "Healthcare & Public Infrastructure",
+    band6: "Bad hospital management makes patient conditions worse.",
+    band8: "A scarcity of ventilators will inevitably exacerbate existing healthcare crises.",
+    mcq: {
+      question: "The economic embargo will only ________ the poverty of citizens.",
+      options: ["mitigate", "exacerbate", "ameliorate", "extenuate"],
+      answer: 1,
+      explanation: "💡 বাক্যের অর্থ অনুযায়ী নিষেধাজ্ঞা জনগণের দারিদ্র্যকে আরও খারাপ বা তীব্র করবে (exacerbate)।"
+    },
+    synonyms: "worsen, aggravate, inflame, compound",
+    antonyms: "mitigate, alleviate, soothe, appease"
+  },
+  {
+    id: 3,
+    word: "UBIQUITOUS",
+    pos: "adj",
+    ipa: "/juːˈbɪk.wɪ.təs/",
+    tag: "🏛️ Combined 8 Banks SO '20",
+    bangla: "সর্বব্যাপী; সর্বত্র বিরাজমান",
+    english: "Present, appearing, or found everywhere at the same time",
+    mnemonic: "💡 U (You) + BIQI (বাকি) নেই কোথাও: সর্বত্র চোখে পড়ে এমন উপস্থিতি।",
+    source: "Agrani Bank SO & Dutch-Bangla PO",
+    ieltsTopic: "Technology & Modern Society",
+    band6: "Smartphones are seen everywhere nowadays in cities.",
+    band8: "The ubiquitous proliferation of handheld digital devices has revolutionized human interaction.",
+    mcq: {
+      question: "Select the ANTONYM of 'UBIQUITOUS':",
+      options: ["Omnipresent", "Pervasive", "Rare / Scarce", "Universal"],
+      answer: 2,
+      explanation: "💡 Ubiquitous অর্থ সর্বত্র বিদ্যমান; এর বিপরীত হলো Rare বা Scarce (বিরল)।"
+    },
+    synonyms: "omnipresent, pervasive, universal, rife",
+    antonyms: "rare, scarce, infrequent, localized"
+  },
+  {
+    id: 4,
+    word: "EPHEMERAL",
+    pos: "adj",
+    ipa: "/ɪˈfem.ər.əl/",
+    tag: "⚡ Janata Bank AEO '19",
+    bangla: "ক্ষণস্থায়ী; স্বল্পকাল স্থায়ী",
+    english: "Lasting for a very short time; transitory",
+    mnemonic: "💡 E-PHEM (আফিম): আফিমের নেশা বা রঙধনু যেমন ক্ষণস্থায়ী হয়।",
+    source: "Probashi Kallyan Bank PO",
+    ieltsTopic: "Culture & Social Media Trends",
+    band6: "Viral internet videos only last for a few days.",
+    band8: "Fame derived from short-form social media clips is notoriously ephemeral.",
+    mcq: {
+      question: "Which word best matches 'EPHEMERAL'?",
+      options: ["Eternal", "Transient", "Perpetual", "Enduring"],
+      answer: 1,
+      explanation: "💡 Transient মানে ক্ষণস্থায়ী, যা Ephemeral এর নিখুঁত সমার্থক শব্দ।"
+    },
+    synonyms: "transient, fleeting, momentary, evanescent",
+    antonyms: "perpetual, eternal, enduring, everlasting"
+  },
+  {
+    id: 5,
+    word: "LACONIC",
+    pos: "adj",
+    ipa: "/ləˈkɒn.ɪk/",
+    tag: "🔥 One Bank Ltd. SCO '18",
+    bangla: "সংক্ষিপ্ত ও অর্থপূর্ণ; অল্পকথায় প্রকাশিত",
+    english: "Using very few words in speech or writing; concise to the point of seeming rude",
+    mnemonic: "💡 LACK + TONIC: যার কথায় টনিকের মতো অতিরিক্ত কথার ঘাটতি (Lack) কিন্তু জোরালো।",
+    source: "One Bank SCO (No: 2064)",
+    ieltsTopic: "Communication & Academic Writing",
+    band6: "The leader gave a very short reply during the interview.",
+    band8: "His laconic response conveyed profound authority without superfluous rhetoric.",
+    mcq: {
+      question: "Choose the word OPPOSITE in meaning to 'LACONIC':",
+      options: ["Stylized", "Verbose", "Unedited", "Insincere"],
+      answer: 1,
+      explanation: "💡 Laconic = স্বল্পভাষী; এর বিপরীত Verbose = বাচাল বা শব্দাড়ম্বরপূর্ণ।"
+    },
+    synonyms: "concise, terse, succinct, pithy, brief",
+    antonyms: "verbose, loquacious, garrulous, rambling"
+  },
+
+  // DAY 2 (Words 6 - 10)
+  {
+    id: 6,
+    word: "LOQUACIOUS",
+    pos: "adj",
+    ipa: "/ləˈkweɪ.ʃəs/",
+    tag: "🔥 Janata Bank AEO '19",
+    bangla: "বাচাল; অতিমাত্রায় বাকপটু",
+    english: "Tending to talk a great deal; talkative and garrulous",
+    mnemonic: "💡 LOQU (শব্দ/কথা): যে ব্যক্তি অনর্গল কথা বলতে ভালোবাসে।",
+    source: "Janata Bank (No: 2370) & National Bank PO",
+    ieltsTopic: "Interpersonal Relations & Personality",
+    band6: "He talks too much and disrupts the meeting continuously.",
+    band8: "A loquacious candidate often risks diluting essential substance with peripheral chatter.",
+    mcq: {
+      question: "Select the word that is most nearly OPPOSITE to 'LOQUACIOUS':",
+      options: ["Tranquil", "Skeptical", "Morose", "Taciturn"],
+      answer: 3,
+      explanation: "💡 Loquacious = বাচাল; Taciturn = স্বল্পভাষী বা মৌনস্বভাব।"
+    },
+    synonyms: "talkative, garrulous, voluble, chatty",
+    antonyms: "taciturn, reticent, reserved, laconic"
+  },
+  {
+    id: 7,
+    word: "GULLIBLE",
+    pos: "adj",
+    ipa: "/ˈɡʌl.ə.bəl/",
+    tag: "🏛️ Joint Recruitment 2 Banks '19",
+    bangla: "সহজে প্রতারণীয়; অতি বিশ্বাসপ্রবণ",
+    english: "Easily persuaded to believe something; credulous",
+    mnemonic: "💡 GULL (গুল মারা): যাকে গুল মারলে বা মিথ্যা বললেও সহজে বিশ্বাস করে।",
+    source: "Joint 2 Banks Officer (No: 2186)",
+    ieltsTopic: "Digital Literacy & Cyber Fraud",
+    band6: "Old people are easily fooled by online bank scams.",
+    band8: "Gullible consumers frequently fall prey to sophisticated phishing algorithms.",
+    mcq: {
+      question: "He is very ________; he believes everything told to him.",
+      options: ["gullible", "fallible", "sensible", "credible"],
+      answer: 0,
+      explanation: "💡 সহজে যা বিশ্বাস করে তাকে Gullible বলে। Credible মানে বিশ্বাসযোগ্য।"
+    },
+    synonyms: "credulous, naive, impressionable, unsuspecting",
+    antonyms: "astute, skeptical, shrewd, suspicious"
+  },
+  {
+    id: 8,
+    word: "ASTUTE",
+    pos: "adj",
+    ipa: "/əˈstjuːt/",
+    tag: "⚡ Dutch-Bangla Bank PO '17",
+    bangla: "বিচক্ষণ; ধূর্ত ও তীক্ষ্ণবুদ্ধিসম্পন্ন",
+    english: "Having or showing an ability to accurately assess situations or people to one's advantage",
+    mnemonic: "💡 AS + TUTE (Tutor): একজন অভিজ্ঞ টিউটরের মতো তীক্ষ্ণ বিচারবোধসম্পন্ন।",
+    source: "Dutch-Bangla PO (No: 1779)",
+    ieltsTopic: "Business Leadership & Negotiation",
+    band6: "The manager made smart business decisions during the crisis.",
+    band8: "Her astute fiscal management steered the multinational enterprise through market turbulence.",
+    mcq: {
+      question: "Select the SYNONYM of 'ASTUTE':",
+      options: ["Affectionate", "Intelligent / Shrewd", "Trivial", "Polite"],
+      answer: 1,
+      explanation: "💡 Astute মানে জ্ঞানী বা তীক্ষ্ণবুদ্ধিসম্পন্ন (Intelligent / Shrewd)।"
+    },
+    synonyms: "shrewd, sharp, perspicacious, sagacious, keen",
+    antonyms: "naive, foolish, obtuse, gullible"
+  },
+  {
+    id: 9,
+    word: "OBSOLETE",
+    pos: "adj",
+    ipa: "/ˌɒb.səˈliːt/",
+    tag: "🔥 Pubali Bank Ltd. SO '17",
+    bangla: "অপ্রচলিত; সেকেলে ও কার্যকারিতাহীন",
+    english: "No longer produced or used; out of date",
+    mnemonic: "💡 OBSO (অবসরে) + LET: যা পুরনো হয়ে অবসরে পাঠানো হয়েছে।",
+    source: "Pubali Bank SO (No: 1708)",
+    ieltsTopic: "Automation & Employment Trends",
+    band6: "Old machines are not useful in modern factories anymore.",
+    band8: "Rapid technological disruption risks rendering conventional manual vocations obsolete.",
+    mcq: {
+      question: "The bullock cart is a superannuated mode of transportation. Here superannuated means:",
+      options: ["cheaper", "obsolete", "quicker", "rural"],
+      answer: 1,
+      explanation: "💡 Superannuated এবং Obsolete উভয় শব্দের অর্থ অপ্রচলিত বা সেকেলে।"
+    },
+    synonyms: "antiquated, archaic, outmoded, defunct, superannuated",
+    antonyms: "contemporary, modern, cutting-edge, state-of-the-art"
+  },
+  {
+    id: 10,
+    word: "CONTEMPORARY",
+    pos: "adj",
+    ipa: "/kənˈtem.pər.ər.i/",
+    tag: "⚡ Uttara Bank Ltd. PO '17",
+    bangla: "সমসাময়িক; বর্তমান যুগের",
+    english: "Living or occurring at the same time; belonging to the present",
+    mnemonic: "💡 CON (একসাথে) + TEMPO (সময়): একই সময়ে সংঘটিত।",
+    source: "Uttara Bank PO (No: 1862)",
+    ieltsTopic: "Art, Architecture & Society",
+    band6: "Today's youth face new types of mental stress.",
+    band8: "Contemporary youths encounter unprecedented socio-economic pressures in hyper-urbanized settings.",
+    mcq: {
+      question: "Keats and Shelley were poets of the same period; they were ________.",
+      options: ["contemporary", "colleague", "associate", "co-writers"],
+      answer: 0,
+      explanation: "💡 একই সময়ের হলে তাকে Contemporary (সমসাময়িক) বলা হয়।"
+    },
+    synonyms: "modern, current, contemporaneous, present-day",
+    antonyms: "obsolete, antiquated, ancient, predecessor"
+  },
+
+  // DAY 3 (Words 11 - 15)
+  {
+    id: 11,
+    word: "PROBITY",
+    pos: "noun",
+    ipa: "/ˈprəʊ.bə.ti/",
+    tag: "🔥 Bangladesh Bank AD '18",
+    bangla: "সাধুতা; চারিত্রিক সততা ও ন্যায়নিষ্ঠা",
+    english: "The quality of having strong moral principles; honesty and decency",
+    mnemonic: "💡 PROVE + INTEGRITY: যার সততা ও সাধুতা যে কোনো পরীক্ষায় প্রমানিত।",
+    source: "Bangladesh Bank AD (No: 2095) & Southeast Bank",
+    ieltsTopic: "Governance & Anti-Corruption",
+    band6: "Civil servants must always be honest in their duties.",
+    band8: "Public servants must demonstrate unimpeachable probity to sustain civil trust in statutory institutions.",
+    mcq: {
+      question: "Which of the following is synonymous with 'PROBITY'?",
+      options: ["Expanse", "Determination", "Virtue / Integrity", "Proclivity"],
+      answer: 2,
+      explanation: "💡 Probity অর্থ চারিত্রিক সাধুতা বা সততা, যার সঠিক উত্তর Virtue বা Integrity।"
+    },
+    synonyms: "integrity, rectitude, uprightness, honesty, fidelity",
+    antonyms: "perfidy, corruption, depravity, dishonesty"
+  },
+  {
+    id: 12,
+    word: "PECULATION",
+    pos: "noun",
+    ipa: "/ˌpek.jəˈleɪ.ʃən/",
+    tag: "🔥 Sonali & Joint 2 Banks '19",
+    bangla: "তছরুপ; অর্থ বা সম্পদ আত্মসাৎ",
+    english: "Embezzlement or theft of public or corporate money entrusted to one's care",
+    mnemonic: "💡 PECU (পকেটে) + LATION: অফিসের টাকা নিজের পকেটে ভরে আত্মসাৎ করা।",
+    source: "Sonali Bank Officer 2018 (No: 2048)",
+    ieltsTopic: "Corporate Governance & Crime",
+    band6: "The bank manager stole millions of dollars from the accounts.",
+    band8: "Systemic peculation within state financial institutions severely undermines macroeconomic stability.",
+    mcq: {
+      question: "MONEY : PECULATION :: WRITING : ?",
+      options: ["Radiation", "Plagiarism", "Insult", "Comment"],
+      answer: 1,
+      explanation: "💡 টাকার ক্ষেত্রে আত্মসাৎ হলো Peculation; আর অন্যের লেখার ক্ষেত্রে চুরি হলো Plagiarism।"
+    },
+    synonyms: "embezzlement, defalcation, misappropriation, pilferage",
+    antonyms: "restitution, compensation, reimbursement"
+  },
+  {
+    id: 13,
+    word: "ENERVATE",
+    pos: "verb",
+    ipa: "/ˈen.ə.veɪt/",
+    tag: "⚡ Agrani Bank Ltd. SO '17",
+    bangla: "দুর্বল বা শক্তিহীন করা",
+    english: "To cause someone to feel drained of energy or vitality; weaken",
+    mnemonic: "💡 EN (End) + NERVE: স্নায়ু বা প্রাণশক্তি শেষ করে দুর্বল করে ফেলা।",
+    source: "Modhumoti Bank & Agrani Bank SO (No: 1832)",
+    ieltsTopic: "Health & Work-Life Balance",
+    band6: "Working 14 hours every day makes workers feel very tired.",
+    band8: "Unremitting corporate overwork serves to enervate even the most enthusiastic professionals.",
+    mcq: {
+      question: "Select the word that is OPPOSITE to 'ENERVATE':",
+      options: ["Weaken", "Invigorate", "Debilitate", "Drain"],
+      answer: 1,
+      explanation: "💡 Enervate = দুর্বল করা; Invigorate = সতেজ ও প্রাণবন্ত করা।"
+    },
+    synonyms: "debilitate, sap, exhaust, fatigue, devitalize",
+    antonyms: "invigorate, energize, animate, vitalize"
+  },
+  {
+    id: 14,
+    word: "INVIGORATE",
+    pos: "verb",
+    ipa: "/ɪnˈvɪɡ.ər.eɪt/",
+    tag: "🏛️ Southeast Bank Officer '18",
+    bangla: "প্রাণবন্ত বা বলবান করা; উদ্দীপিত করা",
+    english: "To give strength or energy to someone or something",
+    mnemonic: "💡 IN + VIGOR: যার মধ্যে নতুন Vigor (তেজ বা উদ্দীপনা) প্রবেশ করানো।",
+    source: "Southeast Bank Trainee Officer",
+    ieltsTopic: "Economic Reform & Regeneration",
+    band6: "New tax cuts will help small businesses grow again.",
+    band8: "Targeted fiscal stimulus is vital to invigorate languishing regional manufacturing sectors.",
+    mcq: {
+      question: "A walk in the fresh morning air will ________ your spirit.",
+      options: ["enervate", "invigorate", "palliate", "castigate"],
+      answer: 1,
+      explanation: "💡 সকালের তাজা বাতাস মনকে প্রাণবন্ত (invigorate) করে।"
+    },
+    synonyms: "revitalize, refresh, energize, stimulate, rejuvenate",
+    antonyms: "enervate, exhaust, deplete, deaden"
+  },
+  {
+    id: 15,
+    word: "DISSEMINATE",
+    pos: "verb",
+    ipa: "/dɪˈsem.ɪ.neɪt/",
+    tag: "🔥 Probashi Kallyan Bank AP '19",
+    bangla: "ব্যাপকভাবে প্রচার বা ছড়িয়ে দেওয়া",
+    english: "To scatter or spread something (especially information) widely",
+    mnemonic: "💡 DIS + SEMINATE (Semen/বীজ): জমিতে বীজ ছড়িয়ে দেওয়ার মতো তথ্য ছড়িয়ে দেওয়া।",
+    source: "Probashi Kallyan Bank (No: 2312) & Sonali Bank",
+    ieltsTopic: "Mass Media & Public Awareness",
+    band6: "The government should tell people about the new law.",
+    band8: "Public health agencies must expeditiously disseminate preventative protocols during epidemics.",
+    mcq: {
+      question: "AIDS is not a disease that can be ________ through the air.",
+      options: ["circulated", "transferred", "disseminated", "transmitted"],
+      answer: 3,
+      explanation: "💡 রোগ সংক্রমণের ক্ষেত্রে Transmitted বসে। তথ্য বা বীজ ছড়ানোর ক্ষেত্রে Disseminated বসে।"
+    },
+    synonyms: "broadcast, circulate, propagate, disperse, promulgate",
+    antonyms: "suppress, withhold, conceal, collect"
+  },
+
+  // DAY 4 (Words 16 - 20)
+  {
+    id: 16,
+    word: "ERADICATE",
+    pos: "verb",
+    ipa: "/ɪˈræd.ɪ.keɪt/",
+    tag: "⚡ Dutch-Bangla Bank PO '19",
+    bangla: "নির্মূল করা; মূলোৎপাটন করা",
+    english: "To destroy completely; put an end to",
+    mnemonic: "💡 E + RADIX (Root): কোনো কিছুকে শিকড়সহ উপড়ে ফেলে ধ্বংস করা।",
+    source: "Dutch-Bangla Bank (No: 2416)",
+    ieltsTopic: "Global Health & Poverty Alleviation",
+    band6: "The UN aims to completely finish extreme hunger by 2030.",
+    band8: "Stringent sanitation measures are mandatory to eradicate waterborne pathogens from urban slums.",
+    mcq: {
+      question: "Which of the following is the nearest antonym of 'ERADICATE'?",
+      options: ["Abolish", "Exterminate", "Cultivate / Establish", "Extirpate"],
+      answer: 2,
+      explanation: "💡 Eradicate = নির্মূল করা; Cultivate/Establish = প্রতিষ্ঠা বা চাষ করা।"
+    },
+    synonyms: "extirpate, eliminate, annihilate, obliterate, uproot",
+    antonyms: "engender, cultivate, preserve, establish"
+  },
+  {
+    id: 17,
+    word: "LUCRATIVE",
+    pos: "adj",
+    ipa: "/ˈluː.krə.tɪv/",
+    tag: "🔥 Pubali Bank & EXIM Bank '20",
+    bangla: "লাভজনক; প্রচুর মুনাফাদায়ী",
+    english: "Producing a great deal of profit; financially rewarding",
+    mnemonic: "💡 LUCRE (টাকা বা মোহর): যা থেকে প্রচুর টাকা লাভ হয়।",
+    source: "EXIM Bank TO 2020 (No: 2426)",
+    ieltsTopic: "Career Choice & Modern Industry",
+    band6: "Working in software gives a lot of money to graduates.",
+    band8: "Specializing in artificial intelligence affords lucrative remuneration in global tech conglomerates.",
+    mcq: {
+      question: "The foreign investment proved to be highly ________ for both partners.",
+      options: ["onerous", "lucrative", "austere", "deleterious"],
+      answer: 1,
+      explanation: "💡 উভয়ের জন্য লাভজনক প্রমাণিত হয়েছিল (lucrative)। Onerous মানে দুর্বহ বা কষ্টসাধ্য।"
+    },
+    synonyms: "profitable, remunerative, lucrative, gainful, rewarding",
+    antonyms: "unprofitable, loss-making, disadvantageous"
+  },
+  {
+    id: 18,
+    word: "PRODIGAL",
+    pos: "adj",
+    ipa: "/ˈprɒd.ɪ.ɡəl/",
+    tag: "🏛️ Joint 8 Banks SO '18",
+    bangla: "অপব্যয়ী; অমিতব্যয়ী ব্যক্তি",
+    english: "Spending money or resources freely and recklessly; wastefully extravagant",
+    mnemonic: "💡 PROUD + GIRL: অতিরিক্ত অহংকার দেখিয়ে শপিংয়ে অকাতরে টাকা ওড়ানো।",
+    source: "Bangladesh Krishi Bank SO",
+    ieltsTopic: "Financial Management & Consumerism",
+    band6: "Young people spend too much money on luxury items.",
+    band8: "Prodigal expenditure on conspicuous status symbols precipitates long-term household debt.",
+    mcq: {
+      question: "Choose the word OPPOSITE in meaning to 'PRODIGAL':",
+      options: ["Frugal / Thrifty", "Extravagant", "Generous", "Lavish"],
+      answer: 0,
+      explanation: "💡 Prodigal = অপব্যয়ী; Frugal/Thrifty = মিতব্যয়ী।"
+    },
+    synonyms: "extravagant, profligate, spendthrift, wasteful, lavish",
+    antonyms: "frugal, thrifty, parsimonious, economical"
+  },
+  {
+    id: 19,
+    word: "FASTIDIOUS",
+    pos: "adj",
+    ipa: "/fæsˈtɪd.i.əs/",
+    tag: "🔥 Joint Recruitment 4 Banks '18",
+    bangla: "খুঁতখুঁতে; সহজে সন্তুষ্ট হয় না এমন",
+    english: "Very attentive to and concerned about accuracy and detail; hard to please",
+    mnemonic: "💡 FAST + TEDIOUS: যার প্রতিটি কাজে অতিরিক্ত নিখুঁত হতে গিয়ে সব কাজ tedious হয়ে যায়।",
+    source: "Joint 4 Banks IT/ICT (No: 2171)",
+    ieltsTopic: "Academic Research & Quality Assurance",
+    band6: "He checks every small detail again and again before submitting.",
+    band8: "A fastidious researcher will rigorously cross-examine secondary statistical anomalies.",
+    mcq: {
+      question: "Select the SYNONYM of 'FASTIDIOUS':",
+      options: ["Finicky / Meticulous", "Quarrelsome", "Meteoric", "Modulate"],
+      answer: 0,
+      explanation: "💡 Fastidious অর্থ খুঁতখুঁতে বা অতি সতর্ক (Finicky বা Meticulous)।"
+    },
+    synonyms: "meticulous, finicky, punctilious, scrupulous, exacting",
+    antonyms: "careless, slipshod, haphazard, slovenly"
+  },
+  {
+    id: 20,
+    word: "HAPHAZARD",
+    pos: "adj",
+    ipa: "/hæpˈhæz.əd/",
+    tag: "⚡ Janata Bank AEO '19",
+    bangla: "এলোমেলো; পরিকল্পনাহীন বা বিশৃঙ্খল",
+    english: "Lacking any obvious principle of organization; random and chaotic",
+    mnemonic: "💡 HAP (ভাগ্যের ওপর) + HAZARD (বিপদ): পরিকল্পনাহীনভাবে এলোমেলো কাজ করলে বিপদ ঘটে।",
+    source: "Janata Bank (No: 2372)",
+    ieltsTopic: "Urban Development & Infrastructure",
+    band6: "Cities grow without any proper road planning.",
+    band8: "Haphazard urban sprawl incurs acute logistical bottlenecks and environmental degradation.",
+    mcq: {
+      question: "Select the ANTONYM of 'HAPHAZARD':",
+      options: ["Fortuitous", "Deliberate / Methodical", "Indifferent", "Accidental"],
+      answer: 1,
+      explanation: "💡 Haphazard = পরিকল্পনাহীন বা বিশৃঙ্খল; Deliberate/Methodical = সুপরিকল্পিত বা সতর্ক।"
+    },
+    synonyms: "random, disorganized, erratic, chaotic, aimless",
+    antonyms: "systematic, methodical, organized, deliberate"
+  },
+
+  // DAY 5 (Words 21 - 25)
+  {
+    id: 21,
+    word: "OSTENTATIOUS",
+    pos: "adj",
+    ipa: "/ˌɒs.tenˈteɪ.ʃəs/",
+    tag: "🔥 Joint 5 Banks (AME/HE/AE) '18",
+    bangla: "লোকদেখানো; জাঁকজমকপূর্ণ ও প্রদর্শনকামী",
+    english: "Characterized by vulgar or pretentious display; designed to impress or attract notice",
+    mnemonic: "💡 OSTEN (অস্টিন গাড়ি) + TASTE: নিজের দামি গাড়ি ও পোশাক সবাইকে দেখিয়ে বেড়ানো।",
+    source: "Joint 5 Banks (No: 2163) & Krishi Bank Officer",
+    ieltsTopic: "Consumer Psychology & Social Class",
+    band6: "Rich people buy big sports cars to show off to others.",
+    band8: "Ostentatious consumerism reflects an acute appetite for social validation rather than utilitarian utility.",
+    mcq: {
+      question: "Which of the following is the antonym of 'GAUDY' or 'OSTENTATIOUS'?",
+      options: ["Sumptuous", "Blatant", "Modest", "Flamboyant"],
+      answer: 2,
+      explanation: "💡 Ostentatious এবং Gaudy এর অর্থ জাঁকজমকপূর্ণ বা প্রদর্শনকামী; এর বিপরীত হলো Modest (বিনয়ী/মিত)।"
+    },
+    synonyms: "pretentious, showy, flamboyant, gaudy, flamboyant",
+    antonyms: "modest, unpretentious, understated, austere"
+  },
+  {
+    id: 22,
+    word: "AUSTERE",
+    pos: "adj",
+    ipa: "/ɒsˈtɪər/",
+    tag: "⚡ Bangladesh Krishi Bank Officer '17",
+    bangla: "অনাড়ম্বর; অত্যন্ত কঠোর ও নিরলংকার",
+    english: "Severe or strict in manner, attitude, or appearance; without luxury or comfort",
+    mnemonic: "💡 AUS + TEAR (অশ্রু): চোখের জলের মতো নির্ভেজাল, কঠোর ও কোনো বিলাসিতাহীন জীবন।",
+    source: "Rupali Bank Officer 2018",
+    ieltsTopic: "Public Finance & Economic Crises",
+    band6: "The government cut all party spending and made budgets very strict.",
+    band8: "Protracted austere fiscal policies have dramatically reduced public subsidies across social services.",
+    mcq: {
+      question: "His lifestyle was completely ________; devoid of decorative indulgence.",
+      options: ["austere", "ostentatious", "loquacious", "prodigal"],
+      answer: 0,
+      explanation: "💡 কোনো বিলাসিতাহীন অনাড়ম্বর জীবনকে Austere বলে।"
+    },
+    synonyms: "spartan, ascetic, frugal, plain, rigorous",
+    antonyms: "luxurious, opulent, lavish, ornate"
+  },
+  {
+    id: 23,
+    word: "PIVOTAL",
+    pos: "adj",
+    ipa: "/ˈpɪv.ə.təl/",
+    tag: "🔥 Dutch-Bangla Bank PO '19",
+    bangla: "সর্বপ্রধান; কেন্দ্রবিন্দু বা চূড়ান্ত গুরুত্বপূর্ণ",
+    english: "Of crucial importance in relation to the development or success of something else",
+    mnemonic: "💡 PIVOT (অক্ষ বা খিলান): যার ওপর সবকিছু ঘুরে এবং নির্ভর করে।",
+    source: "Dutch-Bangla Bank PO (No: 2421)",
+    ieltsTopic: "Education & Economic Growth",
+    band6: "Primary education is very important for national development.",
+    band8: "Vocational literacy plays a pivotal role in augmenting juvenile employability in emerging markets.",
+    mcq: {
+      question: "Find the odd word from the list:",
+      options: ["Central", "Prominent", "Significant", "Peripheral"],
+      answer: 3,
+      explanation: "💡 Central, Pivotal, Significant হলো মূল বা প্রধান; Peripheral হলো প্রান্তিক বা গৌণ।"
+    },
+    synonyms: "crucial, vital, critical, quintessential, central",
+    antonyms: "peripheral, secondary, negligible, trivial"
+  },
+  {
+    id: 24,
+    word: "PERIPHERAL",
+    pos: "adj",
+    ipa: "/pəˈrɪf.ər.əl/",
+    tag: "🏛️ EXIM Bank Ltd. TO '20",
+    bangla: "প্রান্তিক; গৌণ বা অপ্রধান",
+    english: "Relating to or situated on the edge or periphery of something; of secondary importance",
+    mnemonic: "💡 PERIMETER (পরিসীমা): যা কেন্দ্রের মূল বিষয় নয়, বরং সীমানার প্রান্তে অবস্থান করে।",
+    source: "EXIM Bank TO 2020",
+    ieltsTopic: "Corporate Strategy & Governance",
+    band6: "Do not waste time talking about unimportant issues in the meeting.",
+    band8: "Senior management should delegate peripheral operational tasks and concentrate on strategic innovation.",
+    mcq: {
+      question: "Which word is the opposite of 'PIVOTAL'?",
+      options: ["Cardinal", "Peripheral", "Monumental", "Primary"],
+      answer: 1,
+      explanation: "💡 Pivotal (অত্যন্ত গুরুত্বপূর্ণ) এর বিপরীত Peripheral (গৌণ বা প্রান্তিক)।"
+    },
+    synonyms: "marginal, subsidiary, tangential, secondary, incidental",
+    antonyms: "pivotal, central, fundamental, primary"
+  },
+  {
+    id: 25,
+    word: "STALEMATE",
+    pos: "noun",
+    ipa: "/ˈsteɪl.meɪt/",
+    tag: "🔥 Sonali Bank Officer (Cash) '19",
+    bangla: "অচলাবস্থা; সমাধানহীন বন্ধ্যা পরিস্থিতি",
+    english: "A situation in which further action or progress by opposing sides seems impossible",
+    mnemonic: "💡 STALE (বাসি/স্থির) + MATE (দাবার কিস্তিমাত): খেলায় উভয় পক্ষ এমন আটকে গেছে যেখানে কোনো চাল নেই।",
+    source: "Sonali Bank Officer (No: 2253)",
+    ieltsTopic: "International Diplomacy & Conflicts",
+    band6: "Peace talks between the two countries stopped because neither side agreed.",
+    band8: "Diplomatic negotiations collapsed into a prolonged stalemate over contested maritime boundaries.",
+    mcq: {
+      question: "Select the word that is most nearly SIMILAR in meaning to 'STALEMATE':",
+      options: ["Degeneration", "Deadlock", "Exhaustion", "Settlement"],
+      answer: 1,
+      explanation: "💡 Stalemate এর নিখুঁত সমার্থক শব্দ Deadlock (অচলাবস্থা)।"
+    },
+    synonyms: "deadlock, impasse, stand-off, gridlock, quandary",
+    antonyms: "breakthrough, progress, resolution, advance"
+  },
+
+  // DAY 6 (Words 26 - 30)
+  {
+    id: 26,
+    word: "CONCILIATORY",
+    pos: "adj",
+    ipa: "/kənˈsɪl.i.ə.tər.i/",
+    tag: "⚡ Modhumoti Bank Ltd. PO '17",
+    bangla: "মীমাংসামূলক; বিরোধ দূর করে শান্ত করে এমন",
+    english: "Intended or likely to placate, pacify, or reconcile",
+    mnemonic: "💡 CONCILE (Reconcile / মিটমাট করা): যে কথা বা আচরণ বিরোধ মিটিয়ে বন্ধুত্ব আনে।",
+    source: "Modhumoti Bank PO (No: 1666)",
+    ieltsTopic: "Industrial Relations & Conflict Resolution",
+    band6: "The boss spoke nicely to the angry workers to stop the strike.",
+    band8: "Adopting a conciliatory posture enabled trade union leaders to reach a historic collective agreement.",
+    mcq: {
+      question: "Which of the following is the antonym of 'POLEMICAL'?",
+      options: ["Imitative", "Lavish", "Conciliatory", "Attractive"],
+      answer: 2,
+      explanation: "💡 Polemical = বিবাদমূলক বা আক্রমণাত্মক; Conciliatory = মীমাংসামূলক বা শান্তকারী।"
+    },
+    synonyms: "placatory, appeasing, pacifying, peacemaking, mollifying",
+    antonyms: "polemical, confrontational, antagonistic, bellicose"
+  },
+  {
+    id: 27,
+    word: "VINDICATE",
+    pos: "verb",
+    ipa: "/ˈvɪn.dɪ.keɪt/",
+    tag: "🔥 Krishi Bank & Janata Bank '17",
+    bangla: "নির্দোষ প্রমাণ করা; অধিকার বা মর্যাদা প্রতিষ্ঠা করা",
+    english: "Clear someone of blame or suspicion; show or prove to be right, reasonable, or justified",
+    mnemonic: "💡 WIN + INDICATE: প্রমাণ উপস্থিত করে মামলা বা সম্মানের লড়াইয়ে জয়ী হওয়া।",
+    source: "Pubali Bank SO & Krishi Bank Officer (No: 1751)",
+    ieltsTopic: "Judicial Systems & Human Rights",
+    band6: "New DNA evidence proved that the prisoner did not commit the crime.",
+    band8: "Decisive forensic evidence served to vindicate the defendant following years of wrongful incarceration.",
+    mcq: {
+      question: "Even though the jury ________ the CEO, his reputation was tarnished by the fraud allegation.",
+      options: ["vindicated, enhanced", "indicated, blemished", "betrayed, ruined", "acquitted, tarnished"],
+      answer: 3,
+      explanation: "💡 Acquitted বা Vindicated মানে নির্দোষ সাব্যস্ত করা; কিন্তু সুনামের ক্ষতি হলো (tarnished)।"
+    },
+    synonyms: "exonerate, absolve, acquit, justify, substantiate",
+    antonyms: "convict, blame, incriminate, condemn"
+  },
+  {
+    id: 28,
+    word: "STIGMA",
+    pos: "noun",
+    ipa: "/ˈstɪɡ.mə/",
+    tag: "🏛️ Rupali Bank Ltd. Officer '19",
+    bangla: "কলঙ্কের দাগ; সামাজিক অপবাদ",
+    english: "A mark of disgrace associated with a particular circumstance, quality, or person",
+    mnemonic: "💡 STICK + MARK: এমন এক কলঙ্কের দাগ যা সমাজে চিরতরে লেগে থাকে।",
+    source: "Rupali Bank Officer (No: 2353)",
+    ieltsTopic: "Mental Health & Societal Awareness",
+    band6: "People do not want to talk about depression because of bad social thoughts.",
+    band8: "Overcoming the pernicious social stigma surrounding mental illness is imperative for preventative healthcare.",
+    mcq: {
+      question: "The synonym of 'STIGMA' is:",
+      options: ["Stain / Disgrace", "Benefit", "Esteem", "Exaltation"],
+      answer: 0,
+      explanation: "💡 Stigma এর সঠিক অর্থ হলো Stain (কলঙ্কের চিহ্ন/দাগ) বা Disgrace।"
+    },
+    synonyms: "shame, dishonor, ignominy, blemish, reproach",
+    antonyms: "honor, distinction, esteem, accolade"
+  },
+  {
+    id: 29,
+    word: "PANACEA",
+    pos: "noun",
+    ipa: "/ˌpæn.əˈsiː.ə/",
+    tag: "🔥 EXIM Bank Trainee Officer '18",
+    bangla: "সর্বব্যাধির মহৌষধ; সর্বরোগ নিরাময়কারী",
+    english: "A solution or remedy for all difficulties or diseases",
+    mnemonic: "💡 PAN (সকল) + ASIA: পুরো এশিয়ার সব রোগের এক একক অব্যর্থ মহৌষধ।",
+    source: "EXIM Bank TO 2018 (No: 1986)",
+    ieltsTopic: "Public Policy & Urban Planning",
+    band6: "Building more roads cannot solve all city traffic problems.",
+    band8: "Digital governance is undeniably advantageous but should not be misconstrued as a universal panacea.",
+    mcq: {
+      question: "A remedy for all diseases is called a/an:",
+      options: ["Drug", "Antiseptic", "Panacea", "Cure"],
+      answer: 2,
+      explanation: "💡 সব রোগের মহৌষধ বা সমাধানকে এক কথায় Panacea বলে।"
+    },
+    synonyms: "cure-all, elixir, universal remedy, catholicon",
+    antonyms: "poison, disease, toxin, plague"
+  },
+  {
+    id: 30,
+    word: "EQUANIMITY",
+    pos: "noun",
+    ipa: "/ˌek.wəˈnɪm.ə.ti/",
+    tag: "⚡ Janata & Rupali Bank Officer '19",
+    bangla: "মনের স্থিরতা; ধীর-প্রশান্ত মানসিক ভারসাম্য",
+    english: "Mental calmness, composure, and evenness of temper, especially in a difficult situation",
+    mnemonic: "💡 EQUAL + MIND: চরম আনন্দ বা বিপদের দিনেও যার মন শান্ত ও সমভাবাপন্ন থাকে।",
+    source: "Janata & Rupali Bank 2019 (No: 2373)",
+    ieltsTopic: "Psychological Resilience & Leadership",
+    band6: "Great doctors stay very calm even when surgeries are difficult.",
+    band8: "Preserving professional equanimity amid institutional crises distinguishes visionary leaders from reactive managers.",
+    mcq: {
+      question: "Identify the correctly spelled word for 'mental calmness':",
+      options: ["Equannimity", "Equanimity", "Equinimity", "Equanimmity"],
+      answer: 1,
+      explanation: "💡 সঠিক বানান হলো EQUANIMITY (E-Q-U-A-N-I-M-I-T-Y)।"
+    },
+    synonyms: "composure, serenity, aplomb, sangfroid, phlegm",
+    antonyms: "agitation, anxiety, perturbation, hysteria"
+  },
+
+  // BONUS DAY 7 (Words 31 - 35 extracted from Bank Vocabulary Test Paper)
+  {
+    id: 31,
+    word: "CRASS",
+    pos: "adj",
+    ipa: "/kræs/",
+    tag: "🏛️ One Bank Ltd. SCO '17",
+    bangla: "স্থূলবুদ্ধি; নির্মম ও কাণ্ডজ্ঞানহীন",
+    english: "Lacking sensitivity, refinement, or intelligence; completely unrefined",
+    mnemonic: "💡 CRASH: কাচের শো-রুমে যেমন গাড়ি ক্র্যাশ করলে কোনো ভদ্রতা থাকে না, তেমনই কাণ্ডজ্ঞানহীন আচরণ।",
+    source: "One Bank Ltd. SCO (No: 1652)",
+    ieltsTopic: "Commercial Advertising & Ethics",
+    band6: "That TV commercial was very rude and insensitive to poor people.",
+    band8: "The advertisement was widely condemned for its crass exploitation of vulnerable demographics.",
+    mcq: {
+      question: "Select the word that is most nearly OPPOSITE in meaning to 'CRASS':",
+      options: ["Demanding", "Florid", "Refined / Polite", "Fair"],
+      answer: 2,
+      explanation: "💡 Crass = নির্বোধ বা স্থূল; Refined = মার্জিত, শিক্ষিত বা রুচিশীল।"
+    },
+    synonyms: "insensitive, boorish, vulgar, tactless, obtuse",
+    antonyms: "refined, sophisticated, tactful, sensitive"
+  },
+  {
+    id: 32,
+    word: "ORIENT",
+    pos: "verb",
+    ipa: "/ˈɔː.ri.ənt/",
+    tag: "🔥 One Bank Ltd. SCO '17",
+    bangla: "পরিচিত বা খাপ খাওয়ানো; দিক নির্ণয় করা",
+    english: "Align or position relative to points or familiar surroundings; familiarize with a new situation",
+    mnemonic: "💡 ORIENTATION: বিশ্ববিদ্যালয়ে নতুন ছাত্রছাত্রীদের ক্লাসের পরিবেশের সাথে পরিচিত করানো।",
+    source: "One Bank Ltd. SCO (No: 1653)",
+    ieltsTopic: "Immigration & Cultural Adaptation",
+    band6: "New students need some time to learn how things work in this university.",
+    band8: "Expatriate professionals require structured induction programs to quickly orient themselves to local workplace norms.",
+    mcq: {
+      question: "Select the word OPPOSITE in meaning to 'ORIENT' (as a verb):",
+      options: ["Hasten", "Defile", "Confuse", "Decline"],
+      answer: 2,
+      explanation: "💡 Orient মানে পরিস্থিতি বুঝে পরিচিত করানো; এর বিপরীত হলো Confuse (বিভ্রান্ত করা)।"
+    },
+    synonyms: "acclimatize, familiarize, adjust, adapt, align",
+    antonyms: "confuse, disorient, perplex, bewilder"
+  },
+  {
+    id: 33,
+    word: "DIATRIBE",
+    pos: "noun",
+    ipa: "/ˈdaɪ.ə.traɪb/",
+    tag: "⚡ One Bank Ltd. SCO '17",
+    bangla: "তীব্র নিন্দা বা তীব্র তিরস্কারপূর্ণ বক্তৃতা",
+    english: "A forceful and bitter verbal attack against someone or something",
+    mnemonic: "💡 DIE + TRIBE: পুরো ট্রাইব বা গোত্রকে ধ্বংস করে দেওয়ার মতো চরম বিষাক্ত আক্রমণাত্মক বক্তৃতা।",
+    source: "One Bank Ltd. SCO (No: 1654)",
+    ieltsTopic: "Media Bias & Political Discourse",
+    band6: "The politician gave an angry speech against the opposition party.",
+    band8: "The editorial unleashed a blistering diatribe against unregulated corporate monopolies.",
+    mcq: {
+      question: "Which of the following is the antonym of 'DIATRIBE'?",
+      options: ["Sermon", "Discourse", "Eulogy", "Lecture"],
+      answer: 2,
+      explanation: "💡 Diatribe = তীব্র নিন্দা বা ভর্ৎসনা; Eulogy = উচ্চপ্রশংসা বা গুণকীর্তন।"
+    },
+    synonyms: "tirade, harangue, invective, fulmination, denunciation",
+    antonyms: "eulogy, panegyric, tribute, praise"
+  },
+  {
+    id: 34,
+    word: "BOLSTER",
+    pos: "verb",
+    ipa: "/ˈbəʊl.stər/",
+    tag: "🔥 One Bank Ltd. SCO '17",
+    bangla: "সমর্থন বা জোরদার করা; ভিত্তি মজবুত করা",
+    english: "Support or strengthen; prop up or reinforce",
+    mnemonic: "💡 BOLT (স্ক্রু/বোল্ট): নাট-বোল্ট যেমন বাড়ি বা কাঠের কাঠামোকে মজবুত ও দৃঢ় করে তোলে।",
+    source: "One Bank Ltd. SCO (No: 1656)",
+    ieltsTopic: "Economic Resilience & Investment",
+    band6: "The government should help local businesses with more money.",
+    band8: "Substantial subsidies are essential to bolster consumer confidence in sustainable green technologies.",
+    mcq: {
+      question: "Select the word OPPOSITE in meaning to 'BOLSTER':",
+      options: ["Condense", "Undermine", "Disprove", "Cancel"],
+      answer: 1,
+      explanation: "💡 Bolster = শক্তি যোগানো বা সমর্থন দেওয়া; Undermine = ভেতর থেকে দুর্বল বা ক্ষয় করা।"
+    },
+    synonyms: "reinforce, fortify, sustain, uphold, underpin",
+    antonyms: "undermine, weaken, sabotage, compromise"
+  },
+  {
+    id: 35,
+    word: "AMALGAMATE",
+    pos: "verb",
+    ipa: "/əˈmæl.ɡə.meɪt/",
+    tag: "🏛️ Modhumoti Bank Ltd. PO '17",
+    bangla: "মিশ্রিত বা একত্র করা; যৌথভাবে সংযুক্ত করা",
+    english: "Combine or unite to form one organization, group, or structure",
+    mnemonic: "💡 AMAL (একত্রিত হওয়া) + MATE: বিভিন্ন বন্ধু বা সংস্থাকে একসাথে এক ছাতার নিচে নিয়ে আসা।",
+    source: "Modhumoti Bank PO (No: 1663)",
+    ieltsTopic: "Corporate Mergers & Globalization",
+    band6: "The two small banks joined together into one big national bank.",
+    band8: "The central monetary board decreed that struggling regional lenders must amalgamate to avert insolvency.",
+    mcq: {
+      question: "Which word is the nearest ANTONYM to 'AMALGAMATE'?",
+      options: ["Study", "Circulate", "Reduce", "Separate / Divide"],
+      answer: 3,
+      explanation: "💡 Amalgamate = একত্র করা বা মেশানো; Separate = পৃথক করা বা আলাদা করা।"
+    },
+    synonyms: "merge, integrate, consolidate, synthesize, fuse",
+    antonyms: "separate, divide, fragment, disunite"
+  }
+];
+
+// App State
+let wordsData = [];
+let currentDay = 1;
+let totalDays = 1;
+let currentWallFilter = 'all';
+let currentWallPage = 1;
+const WALL_PAGE_SIZE = 12;
+let activeTabByWordId = {};
+let quizTimerInterval = null;
+let quizSecondsLeft = 60;
+let quizScore = 0;
+let quizStreak = 0;
+let currentQuizQuestion = null;
+
+// Optimized Speech Synthesis with voice pre-caching
+let cachedSpeechVoices = [];
+function preloadSpeechVoices() {
+  if ('speechSynthesis' in window) {
+    cachedSpeechVoices = window.speechSynthesis.getVoices();
+  }
+}
+if ('speechSynthesis' in window) {
+  preloadSpeechVoices();
+  window.speechSynthesis.onvoiceschanged = preloadSpeechVoices;
+}
+
+function pronounceWord(text) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-GB';
+    utterance.rate = 0.92;
+    utterance.pitch = 1.0;
+    
+    if (cachedSpeechVoices.length === 0) {
+      cachedSpeechVoices = window.speechSynthesis.getVoices();
+    }
+    const gbVoice = cachedSpeechVoices.find(v => v.lang.includes('en-GB') || v.lang.includes('en_GB'));
+    if (gbVoice) utterance.voice = gbVoice;
+    
+    window.speechSynthesis.speak(utterance);
+    showToast(`🔊 Pronouncing "${text}"`);
+  } else {
+    showToast(`🔊 Audio speech not supported on this device.`);
+  }
+}
+
+// Storage helpers
+function loadWordsData() {
+  const stored = localStorage.getItem(STORAGE_KEY_WORDS);
+  if (stored) {
+    try {
+      wordsData = JSON.parse(stored);
+    } catch(e) {
+      console.error(e);
+      wordsData = [...INITIAL_WORDS];
+    }
+  } else {
+    wordsData = [...INITIAL_WORDS];
+    saveWordsData();
+  }
+  recomputeDays();
+}
+
+function saveWordsData() {
+  localStorage.setItem(STORAGE_KEY_WORDS, JSON.stringify(wordsData));
+  recomputeDays();
+}
+
+function getMasteredIds() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY_MASTERED) || '[]');
+  } catch(e) { return []; }
+}
+function saveMasteredIds(ids) {
+  localStorage.setItem(STORAGE_KEY_MASTERED, JSON.stringify(ids));
+  updateMasteryBadges();
+}
+
+function getStarredIds() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY_STARRED) || '[]');
+  } catch(e) { return []; }
+}
+function saveStarredIds(ids) {
+  localStorage.setItem(STORAGE_KEY_STARRED, JSON.stringify(ids));
+}
+
+function getScribblesMap() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY_SCRIBBLES) || '{}');
+  } catch(e) { return {}; }
+}
+function saveScribble(wordId, text) {
+  const map = getScribblesMap();
+  map[wordId] = text;
+  localStorage.setItem(STORAGE_KEY_SCRIBBLES, JSON.stringify(map));
+}
+
+function recomputeDays() {
+  totalDays = Math.max(1, Math.ceil(wordsData.length / WORDS_PER_DAY));
+  const savedDay = parseInt(localStorage.getItem(STORAGE_KEY_CURRENT_DAY) || '1', 10);
+  if (savedDay >= 1 && savedDay <= totalDays) {
+    currentDay = savedDay;
+  } else if (currentDay > totalDays) {
+    currentDay = totalDays;
+  }
+}
+
+// Day Selector Dropdown Builder
+function populateDaySelector() {
+  const select = document.getElementById('daySelectorDropdown');
+  if (!select) return;
+  select.innerHTML = '';
+
+  for (let d = 1; d <= totalDays; d++) {
+    const startIndex = (d - 1) * WORDS_PER_DAY;
+    const dayWords = wordsData.slice(startIndex, startIndex + WORDS_PER_DAY);
+    const wordsPreview = dayWords.map(w => w.word).join(', ') || 'No words';
+
+    const opt = document.createElement('option');
+    opt.value = d;
+    opt.textContent = `Day ${d} (Words ${startIndex + 1}–${startIndex + dayWords.length}): ${wordsPreview}`;
+    if (d === currentDay) opt.selected = true;
+    select.appendChild(opt);
+  }
+}
+
+// Render Daily 5 Sticky Notes
+function renderDailyCards() {
+  const grid = document.getElementById('dailyStickyGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  const startIndex = (currentDay - 1) * WORDS_PER_DAY;
+  const dayWords = wordsData.slice(startIndex, startIndex + WORDS_PER_DAY);
+
+  document.getElementById('currentDayDisplay').textContent = `Day ${currentDay} of ${totalDays}`;
+  
+  const masteredIds = getMasteredIds();
+  const dayMasteredCount = dayWords.filter(w => masteredIds.includes(w.id)).length;
+  document.getElementById('dailyBannerProgressSummary').textContent = 
+    `Showing Words ${startIndex + 1} – ${startIndex + dayWords.length} of ${wordsData.length} Total • ${dayMasteredCount} of ${dayWords.length} Mastered Today`;
+
+  // Sync day dropdown
+  const select = document.getElementById('daySelectorDropdown');
+  if (select) select.value = currentDay;
+
+  if (dayWords.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1/-1; text-align:center; padding: 40px; background:white; border-radius:12px;">
+        <h3>No words scheduled for Day ${currentDay} yet!</h3>
+        <p style="color:var(--text-muted); margin-top:8px;">Add custom words or use the Gemini AI Batch Generator in the Import tab.</p>
+        <button class="btn-action-pill primary" style="margin-top:14px;" onclick="switchView('view-add')">Go to Import / Generator</button>
+      </div>
+    `;
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+  dayWords.forEach((wordItem, idx) => {
+    const cardEl = createStickyCardElement(wordItem, idx, currentDay);
+    fragment.appendChild(cardEl);
+  });
+  grid.appendChild(fragment);
+  updateReminderPreviewText();
+}
+
+// Create a single Sticky Card DOM element
+function createStickyCardElement(wordItem, cardIndex, dayNum) {
+  const card = document.createElement('div');
+  const themeClass = STICKY_THEMES[cardIndex % STICKY_THEMES.length];
+  const rotClass = `rot-${cardIndex % 5}`;
+  card.className = `sticky-card ${themeClass} ${rotClass}`;
+  card.id = `sticky-card-${wordItem.id}`;
+
+  const masteredIds = getMasteredIds();
+  const starredIds = getStarredIds();
+  const scribbles = getScribblesMap();
+
+  const isMastered = masteredIds.includes(wordItem.id);
+  const isStarred = starredIds.includes(wordItem.id);
+  const personalSentence = scribbles[wordItem.id] || '';
+
+  const activeTab = activeTabByWordId[wordItem.id] || 'memory';
+
+  card.innerHTML = `
+    <!-- Masking Tape Pin -->
+    <div class="sticky-pin">DAY ${dayNum} • WORD #${wordItem.id} OF ${Math.max(TOTAL_GOAL_WORDS, wordsData.length)}</div>
+
+    <!-- Top Action Row -->
+    <div class="sticky-card-toprow">
+      <span class="exam-tag-badge" title="${escapeHtml(wordItem.tag || 'Bank Exam Vocab')}">${escapeHtml(wordItem.tag || '🔥 High-Yield')}</span>
+      <div class="sticky-top-actions">
+        <button class="btn-sticky-action" title="Pronounce (Web Speech API)" onclick="pronounceWord('${escapeJsString(wordItem.word)}')">🔊</button>
+        <button class="btn-sticky-action ${isStarred ? 'active-star' : ''}" id="starBtn-${wordItem.id}" title="Star/Bookmark" onclick="toggleStarred(${wordItem.id})">⭐</button>
+        <button class="btn-sticky-action ${isMastered ? 'active-mastered' : ''}" id="masterBtn-${wordItem.id}" title="Mark as Mastered" onclick="toggleMastered(${wordItem.id})">✅</button>
+      </div>
+    </div>
+
+    <!-- Word Title Row -->
+    <div class="sticky-title-row">
+      <h2 class="sticky-word">${escapeHtml(wordItem.word)}</h2>
+      <span class="pos-tag">${escapeHtml(wordItem.pos || 'adj')}</span>
+      <span class="ipa-phonetic">${escapeHtml(wordItem.ipa || '')}</span>
+    </div>
+
+    <!-- Bilingual Meaning Box -->
+    <div class="bangla-box">
+      <div class="bangla-box-bn">🇧🇩 ${escapeHtml(wordItem.bangla)}</div>
+      <div class="bangla-box-en">${escapeHtml(wordItem.english)}</div>
+    </div>
+
+    <!-- 4-Column Segmented Tab Switcher -->
+    <div class="sticky-subtabs">
+      <button class="subtab-btn ${activeTab === 'memory' ? 'active' : ''}" onclick="switchSubTab(${wordItem.id}, 'memory')">🧠 Memory</button>
+      <button class="subtab-btn ${activeTab === 'ielts' ? 'active' : ''}" onclick="switchSubTab(${wordItem.id}, 'ielts')">🎓 IELTS 8</button>
+      <button class="subtab-btn ${activeTab === 'mcq' ? 'active' : ''}" onclick="switchSubTab(${wordItem.id}, 'mcq')">🏦 Exam MCQ</button>
+      <button class="subtab-btn ${activeTab === 'cluster' ? 'active' : ''}" onclick="switchSubTab(${wordItem.id}, 'cluster')">🔗 Cluster</button>
+    </div>
+
+    <!-- Subtab 1: Memory Trick -->
+    <div class="subtab-panel ${activeTab === 'memory' ? 'active' : ''}" id="panel-memory-${wordItem.id}">
+      <div class="mnemonic-header">💡 IMPROVISER BRAIN-GLUE TRICK</div>
+      <div class="mnemonic-text">${escapeHtml(wordItem.mnemonic || 'Mnemonic not configured.')}</div>
+      <div class="source-citation">📖 Book Source: ${escapeHtml(wordItem.source || 'Arifur Rahman Bank Vocabulary 2001-2021')}</div>
+    </div>
+
+    <!-- Subtab 2: IELTS Band 8 -->
+    <div class="subtab-panel ${activeTab === 'ielts' ? 'active' : ''}" id="panel-ielts-${wordItem.id}">
+      <div class="ielts-topic-header">IELTS Domain: ${escapeHtml(wordItem.ieltsTopic || 'Academic Writing & Speaking')}</div>
+      <div class="ielts-box-band6">
+        <span class="band-label red">BAND 6.0 (CONVENTIONAL / BASIC)</span>
+        ${escapeHtml(wordItem.band6 || 'Common phrasing without lexical variation.')}
+      </div>
+      <div class="ielts-box-band8">
+        <span class="band-label green">BAND 8.0+ (SOPHISTICATED COLLOCATION)</span>
+        <b>${escapeHtml(wordItem.band8 || 'Advanced collocations with high precision.')}</b>
+      </div>
+    </div>
+
+    <!-- Subtab 3: Exam MCQ -->
+    <div class="subtab-panel ${activeTab === 'mcq' ? 'active' : ''}" id="panel-mcq-${wordItem.id}">
+      <div class="mcq-question-title">🏦 TEST YOURSELF (CLICK AN OPTION)</div>
+      <div class="mcq-question-text">${escapeHtml(wordItem.mcq ? wordItem.mcq.question : 'Select synonym:')}</div>
+      <div class="mcq-options-grid" id="mcqOptionsGrid-${wordItem.id}">
+        ${renderMcqOptionButtons(wordItem)}
+      </div>
+      <div class="mcq-explanation-box" id="mcqExplanation-${wordItem.id}">
+        ${wordItem.mcq ? escapeHtml(wordItem.mcq.explanation) : ''}
+      </div>
+    </div>
+
+    <!-- Subtab 4: Word Cluster -->
+    <div class="subtab-panel ${activeTab === 'cluster' ? 'active' : ''}" id="panel-cluster-${wordItem.id}">
+      <div class="cluster-section">
+        <div class="cluster-title" style="color:#059669;">🟢 Synonyms:</div>
+        <div class="cluster-pills-wrap">
+          ${(wordItem.synonyms || '').split(',').filter(s => s.trim()).map(s => `<span class="cluster-pill">${escapeHtml(s.trim())}</span>`).join('')}
+        </div>
+      </div>
+      <div class="cluster-section" style="margin-top:10px;">
+        <div class="cluster-title" style="color:#dc2626;">🔴 Antonyms:</div>
+        <div class="cluster-pills-wrap">
+          ${(wordItem.antonyms || '').split(',').filter(a => a.trim()).map(a => `<span class="cluster-pill">${escapeHtml(a.trim())}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <!-- Scribble Box Footer -->
+    <input type="text" class="scribble-box" placeholder="✍️ Write your own sentence with '${escapeHtml(wordItem.word)}' (auto-saves)..." value="${escapeHtml(personalSentence)}" oninput="saveScribble(${wordItem.id}, this.value)">
+  `;
+
+  return card;
+}
+
+function renderMcqOptionButtons(wordItem) {
+  if (!wordItem.mcq || !wordItem.mcq.options) {
+    return `<div style="grid-column:1/-1; font-size:12px; color:var(--text-muted);">No MCQ attached.</div>`;
+  }
+  const opts = wordItem.mcq.options;
+  const labels = ['A', 'B', 'C', 'D'];
+  return opts.map((opt, i) => `
+    <button class="btn-mcq-option" onclick="handleMcqOptionClick(${wordItem.id}, ${i}, ${wordItem.mcq.answer})">
+      <b>${labels[i]}.</b> ${escapeHtml(opt)}
+    </button>
+  `).join('');
+}
+
+function handleMcqOptionClick(wordId, selectedIdx, correctIdx) {
+  const grid = document.getElementById(`mcqOptionsGrid-${wordId}`);
+  const explanationBox = document.getElementById(`mcqExplanation-${wordId}`);
+  if (!grid) return;
+
+  const buttons = grid.querySelectorAll('.btn-mcq-option');
+  buttons.forEach((btn, idx) => {
+    btn.disabled = true;
+    if (idx === correctIdx) {
+      btn.classList.add('correct');
+    } else if (idx === selectedIdx) {
+      btn.classList.add('wrong');
+    }
+  });
+
+  if (explanationBox) {
+    explanationBox.style.display = 'block';
+  }
+
+  if (selectedIdx === correctIdx) {
+    showToast('🎉 Correct Answer! Great memory retention.');
+  } else {
+    showToast('❌ Incorrect. Review the explanation below!');
+  }
+}
+
+// Subtab switcher inside card
+function switchSubTab(wordId, tabName) {
+  activeTabByWordId[wordId] = tabName;
+  const card = document.getElementById(`sticky-card-${wordId}`);
+  if (!card) return;
+
+  const buttons = card.querySelectorAll('.subtab-btn');
+  buttons.forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase().includes(tabName.slice(0, 3)));
+  });
+
+  const panels = card.querySelectorAll('.subtab-panel');
+  panels.forEach(panel => {
+    panel.classList.toggle('active', panel.id === `panel-${tabName}-${wordId}`);
+  });
+}
+
+// Mastery & Star toggles
+function toggleMastered(wordId) {
+  let ids = getMasteredIds();
+  const index = ids.indexOf(wordId);
+  const btn = document.getElementById(`masterBtn-${wordId}`);
+  if (index > -1) {
+    ids.splice(index, 1);
+    if (btn) btn.classList.remove('active-mastered');
+    showToast('Marked as unmastered');
+  } else {
+    ids.push(wordId);
+    if (btn) btn.classList.add('active-mastered');
+    showToast('✅ Marked as Mastered!');
+  }
+  saveMasteredIds(ids);
+  renderDailyCards();
+}
+
+function toggleStarred(wordId) {
+  let ids = getStarredIds();
+  const index = ids.indexOf(wordId);
+  const btn = document.getElementById(`starBtn-${wordId}`);
+  if (index > -1) {
+    ids.splice(index, 1);
+    if (btn) btn.classList.remove('active-star');
+    showToast('Removed from starred');
+  } else {
+    ids.push(wordId);
+    if (btn) btn.classList.add('active-star');
+    showToast('⭐ Starred for daily revision!');
+  }
+  saveStarredIds(ids);
+}
+
+function markAllCurrentDayMastered() {
+  const startIndex = (currentDay - 1) * WORDS_PER_DAY;
+  const dayWords = wordsData.slice(startIndex, startIndex + WORDS_PER_DAY);
+  let ids = getMasteredIds();
+  dayWords.forEach(w => {
+    if (!ids.includes(w.id)) ids.push(w.id);
+  });
+  saveMasteredIds(ids);
+  renderDailyCards();
+  showToast(`✅ All 5 words for Day ${currentDay} marked as mastered!`);
+}
+
+function changeDay(delta) {
+  const nextDay = currentDay + delta;
+  if (nextDay >= 1 && nextDay <= totalDays) {
+    currentDay = nextDay;
+    localStorage.setItem(STORAGE_KEY_CURRENT_DAY, currentDay.toString());
+    renderDailyCards();
+  }
+}
+
+function onDayDropdownSelect(val) {
+  currentDay = parseInt(val, 10);
+  localStorage.setItem(STORAGE_KEY_CURRENT_DAY, currentDay.toString());
+  renderDailyCards();
+}
+
+function surpriseRandomDay() {
+  const randomDay = Math.floor(Math.random() * totalDays) + 1;
+  currentDay = randomDay;
+  localStorage.setItem(STORAGE_KEY_CURRENT_DAY, currentDay.toString());
+  renderDailyCards();
+  showToast(`🎲 Shuffled to Day ${currentDay}!`);
+}
+
+// VIEW 2: Full Corkboard Wall with Filter & Pagination (Optimized with Debounce & Fragment)
+let wallSearchDebounceTimer = null;
+function onWallSearchChange() {
+  if (wallSearchDebounceTimer) clearTimeout(wallSearchDebounceTimer);
+  wallSearchDebounceTimer = setTimeout(() => {
+    currentWallPage = 1;
+    renderWallCards();
+  }, 120);
+}
+
+function clearWallSearch() {
+  document.getElementById('wallSearchInput').value = '';
+  document.getElementById('btnClearSearch').style.display = 'none';
+  if (wallSearchDebounceTimer) clearTimeout(wallSearchDebounceTimer);
+  currentWallPage = 1;
+  renderWallCards();
+}
+
+function setWallFilter(filterName) {
+  currentWallFilter = filterName;
+  currentWallPage = 1;
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.classList.toggle('active', chip.dataset.filter === filterName);
+  });
+  renderWallCards();
+}
+
+function getFilteredWallWords() {
+  const query = (document.getElementById('wallSearchInput')?.value || '').toLowerCase().trim();
+  const clearBtn = document.getElementById('btnClearSearch');
+  if (clearBtn) clearBtn.style.display = query ? 'inline-block' : 'none';
+
+  const masteredIds = getMasteredIds();
+  const starredIds = getStarredIds();
+
+  return wordsData.filter(item => {
+    // Search matching
+    if (query) {
+      const matchWord = item.word.toLowerCase().includes(query);
+      const matchBn = (item.bangla || '').toLowerCase().includes(query);
+      const matchEn = (item.english || '').toLowerCase().includes(query);
+      const matchTag = (item.tag || '').toLowerCase().includes(query);
+      const matchSyn = (item.synonyms || '').toLowerCase().includes(query);
+      const matchMnemonic = (item.mnemonic || '').toLowerCase().includes(query);
+      if (!matchWord && !matchBn && !matchEn && !matchTag && !matchSyn && !matchMnemonic) {
+        return false;
+      }
+    }
+
+    // Category / Status Filter
+    if (currentWallFilter === 'exam-hot') {
+      return (item.tag || '').toLowerCase().includes('bank') || (item.tag || '').includes('🔥') || (item.tag || '').includes('AD');
+    }
+    if (currentWallFilter === 'ielts-writing') {
+      return (item.band8 || '').length > 0;
+    }
+    if (currentWallFilter === 'ielts-speaking') {
+      return (item.band6 || '').length > 0;
+    }
+    if (currentWallFilter === 'starred') {
+      return starredIds.includes(item.id);
+    }
+    if (currentWallFilter === 'mastered') {
+      return masteredIds.includes(item.id);
+    }
+    if (currentWallFilter === 'unmastered') {
+      return !masteredIds.includes(item.id);
+    }
+    return true;
+  });
+}
+
+function renderWallCards() {
+  const grid = document.getElementById('wallStickyGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  const filtered = getFilteredWallWords();
+  const totalPages = Math.max(1, Math.ceil(filtered.length / WALL_PAGE_SIZE));
+  if (currentWallPage > totalPages) currentWallPage = totalPages;
+
+  document.getElementById('wallPageIndicator').textContent = 
+    `Page ${currentWallPage} of ${totalPages} (${filtered.length} Words Found)`;
+  
+  document.getElementById('btnWallPrev').disabled = (currentWallPage <= 1);
+  document.getElementById('btnWallNext').disabled = (currentWallPage >= totalPages);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1/-1; text-align:center; padding:40px; background:white; border-radius:12px;">
+        <h3>No cards found for your search or filter!</h3>
+        <p style="color:var(--text-muted); margin-top:8px;">Try clearing filters or search query.</p>
+        <button class="btn-action-pill" style="margin-top:12px;" onclick="clearWallSearch(); setWallFilter('all');">Reset Filters</button>
+      </div>
+    `;
+    return;
+  }
+
+  const start = (currentWallPage - 1) * WALL_PAGE_SIZE;
+  const pageWords = filtered.slice(start, start + WALL_PAGE_SIZE);
+
+  const fragment = document.createDocumentFragment();
+  pageWords.forEach((wordItem, idx) => {
+    const cardDay = Math.ceil(wordItem.id / WORDS_PER_DAY);
+    const cardEl = createStickyCardElement(wordItem, idx, cardDay);
+    fragment.appendChild(cardEl);
+  });
+  grid.appendChild(fragment);
+}
+
+function changeWallPage(delta) {
+  currentWallPage += delta;
+  renderWallCards();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// VIEW 3: 180-Day Master Table
+function renderMasterTable() {
+  const tbody = document.getElementById('masterTableBody');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  const filterText = (document.getElementById('tableFilterInput')?.value || '').toLowerCase().trim();
+  const masteredIds = getMasteredIds();
+
+  for (let d = 1; d <= totalDays; d++) {
+    const startIndex = (d - 1) * WORDS_PER_DAY;
+    const dayWords = wordsData.slice(startIndex, startIndex + WORDS_PER_DAY);
+
+    // Check if any word in this day matches filter
+    const matches = dayWords.filter(w => {
+      if (!filterText) return true;
+      return w.word.toLowerCase().includes(filterText) || 
+             (w.bangla || '').toLowerCase().includes(filterText) ||
+             (w.synonyms || '').toLowerCase().includes(filterText);
+    });
+
+    if (matches.length === 0) continue;
+
+    // Day Header Row
+    const headerTr = document.createElement('tr');
+    headerTr.className = 'day-header-row';
+    headerTr.innerHTML = `
+      <td colspan="6" style="padding: 8px 14px; font-weight:800; cursor:pointer;" onclick="jumpToDay(${d})">
+        📅 DAY ${d} of 180 • (Words ${startIndex + 1} – ${startIndex + dayWords.length}) — Click to Open Daily Corkboard ➔
+      </td>
+    `;
+    tbody.appendChild(headerTr);
+
+    matches.forEach(w => {
+      const isM = masteredIds.includes(w.id);
+      const tr = document.createElement('tr');
+      tr.onclick = () => jumpToDay(d);
+      tr.innerHTML = `
+        <td style="font-weight:700; color:var(--text-muted);">Day ${d}</td>
+        <td>
+          <div style="font-weight:800; font-size:14px; text-transform:uppercase;">
+            ${escapeHtml(w.word)} 
+            <span style="cursor:pointer;" onclick="event.stopPropagation(); pronounceWord('${escapeJsString(w.word)}')">🔊</span>
+          </div>
+          <div style="font-size:11px; color:#d97706; font-style:italic;">${escapeHtml(w.pos || '')} ${escapeHtml(w.ipa || '')}</div>
+        </td>
+        <td>
+          <div style="font-weight:700; color:var(--text-main);">🇧🇩 ${escapeHtml(w.bangla)}</div>
+          <div style="font-size:11.5px; color:var(--text-muted);">${escapeHtml(w.english)}</div>
+        </td>
+        <td style="font-size:12px;">
+          ${escapeHtml(w.mnemonic || '')}
+        </td>
+        <td style="font-size:11.5px; color:var(--text-muted);">
+          ${escapeHtml(w.synonyms || '')}
+        </td>
+        <td style="text-align:center;">
+          <span style="font-size:14px;">${isM ? '✅' : '⏳'}</span>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+}
+
+function jumpToDay(dayNumber) {
+  currentDay = dayNumber;
+  localStorage.setItem(STORAGE_KEY_CURRENT_DAY, currentDay.toString());
+  switchView('view-daily');
+}
+
+// VIEW 4: 60s Sticky Pop Quiz
+function startNewQuizRound() {
+  if (quizTimerInterval) clearInterval(quizTimerInterval);
+  quizSecondsLeft = 60;
+  quizScore = 0;
+  quizStreak = 0;
+  updateQuizDisplays();
+
+  quizTimerInterval = setInterval(() => {
+    quizSecondsLeft--;
+    updateQuizDisplays();
+    if (quizSecondsLeft <= 0) {
+      clearInterval(quizTimerInterval);
+      showQuizEndSummary();
+    }
+  }, 1000);
+
+  loadNextQuizQuestion();
+}
+
+function updateQuizDisplays() {
+  document.getElementById('quizTimerDisplay').textContent = `⏱️ ${quizSecondsLeft}s`;
+  document.getElementById('quizStreakDisplay').textContent = `🔥 Streak: ${quizStreak}`;
+  document.getElementById('quizScoreDisplay').textContent = `Score: ${quizScore}`;
+}
+
+function loadNextQuizQuestion() {
+  if (wordsData.length === 0) return;
+  const container = document.getElementById('quizCardContent');
+  if (!container) return;
+
+  // Pick random word
+  const randomIndex = Math.floor(Math.random() * wordsData.length);
+  const targetWord = wordsData[randomIndex];
+
+  // Randomly alternate between Exam MCQ or Bangla-to-English IELTS Cloze
+  const isMcq = Math.random() > 0.4 && targetWord.mcq && targetWord.mcq.options;
+
+  if (isMcq) {
+    currentQuizQuestion = {
+      type: 'mcq',
+      word: targetWord,
+      correctIdx: targetWord.mcq.answer
+    };
+    container.innerHTML = `
+      <div style="font-size:11px; font-weight:800; color:#d97706; text-transform:uppercase; margin-bottom:6px;">
+        🏛️ Exam Recalled Question • ${escapeHtml(targetWord.tag || 'Bank Exam')}
+      </div>
+      <div style="font-size:16px; font-weight:700; margin-bottom:14px;">
+        ${escapeHtml(targetWord.mcq.question)}
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;" id="quizOptionButtonsWrap">
+        ${targetWord.mcq.options.map((opt, i) => `
+          <button class="btn-mcq-option" onclick="submitQuizAnswer(${i}, ${targetWord.mcq.answer})">
+            <b>${['A','B','C','D'][i]}.</b> ${escapeHtml(opt)}
+          </button>
+        `).join('')}
+      </div>
+    `;
+  } else {
+    // Bangla Meaning to English Cloze challenge
+    // Generate 4 distractors
+    const otherWords = wordsData.filter(w => w.id !== targetWord.id);
+    const shuffledOthers = otherWords.sort(() => 0.5 - Math.random()).slice(0, 3);
+    const optionsList = [targetWord, ...shuffledOthers].sort(() => 0.5 - Math.random());
+    const correctIdx = optionsList.findIndex(w => w.id === targetWord.id);
+
+    currentQuizQuestion = {
+      type: 'cloze',
+      word: targetWord,
+      correctIdx: correctIdx
+    };
+
+    container.innerHTML = `
+      <div style="font-size:11px; font-weight:800; color:#059669; text-transform:uppercase; margin-bottom:6px;">
+        🇧🇩 Bangla-to-English Recall Challenge
+      </div>
+      <div style="background:rgba(0,0,0,0.03); border-left:4px solid #059669; padding:12px; border-radius:6px; margin-bottom:14px;">
+        <div style="font-size:17px; font-weight:800; color:var(--text-main); margin-bottom:4px;">
+          "${escapeHtml(targetWord.bangla)}"
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); font-style:italic;">
+          ${escapeHtml(targetWord.english)}
+        </div>
+      </div>
+      <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Which English word matches this meaning?</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;" id="quizOptionButtonsWrap">
+        ${optionsList.map((opt, i) => `
+          <button class="btn-mcq-option" onclick="submitQuizAnswer(${i}, ${correctIdx})">
+            <b>${['A','B','C','D'][i]}.</b> ${escapeHtml(opt.word)} (${escapeHtml(opt.pos || '')})
+          </button>
+        `).join('')}
+      </div>
+    `;
+  }
+}
+
+function submitQuizAnswer(selectedIdx, correctIdx) {
+  const container = document.getElementById('quizOptionButtonsWrap');
+  if (container) {
+    const btns = container.querySelectorAll('.btn-mcq-option');
+    btns.forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === correctIdx) btn.classList.add('correct');
+      if (idx === selectedIdx && idx !== correctIdx) btn.classList.add('wrong');
+    });
+  }
+
+  if (selectedIdx === correctIdx) {
+    quizStreak++;
+    quizScore += (10 + quizStreak * 2);
+    showToast(`🔥 +${10 + quizStreak * 2} Points! Streak: ${quizStreak}`);
+  } else {
+    quizStreak = 0;
+    showToast('❌ Wrong answer. Streak reset!');
+  }
+  updateQuizDisplays();
+
+  // Load next after 800ms
+  setTimeout(() => {
+    if (quizSecondsLeft > 0) {
+      loadNextQuizQuestion();
+    }
+  }, 750);
+}
+
+function showQuizEndSummary() {
+  const container = document.getElementById('quizCardContent');
+  if (!container) return;
+  container.innerHTML = `
+    <div style="text-align:center; padding:20px;">
+      <div style="font-size:40px; margin-bottom:10px;">🏆</div>
+      <h3 style="font-size:20px; font-weight:900;">60-Second Blitz Completed!</h3>
+      <p style="font-size:14px; color:var(--text-muted); margin-top:6px;">
+        Final Score: <b>${quizScore}</b> • Top Streak: <b>${quizStreak}</b>
+      </p>
+      <div style="margin-top:16px;">
+        <button class="btn-action-pill primary" onclick="startNewQuizRound()">⚡ Play Again</button>
+        <button class="btn-action-pill" style="margin-left:8px;" onclick="switchView('view-daily')">Return to Today's Notes</button>
+      </div>
+    </div>
+  `;
+}
+
+// VIEW 5: Pin Single Word & Bulk JSON Import
+function handleSingleWordSubmit(e) {
+  e.preventDefault();
+  const word = document.getElementById('addWord').value.trim().toUpperCase();
+  const pos = document.getElementById('addPos').value;
+  const ipa = document.getElementById('addIpa').value.trim();
+  const tag = document.getElementById('addTag').value.trim() || '🔥 Custom Pin';
+  const bangla = document.getElementById('addBangla').value.trim();
+  const english = document.getElementById('addEnglish').value.trim();
+  const mnemonic = document.getElementById('addMnemonic').value.trim();
+  const synonyms = document.getElementById('addSynonyms').value.trim();
+  const antonyms = document.getElementById('addAntonyms').value.trim();
+
+  if (!word || !bangla || !english) {
+    showToast('Please fill out word, bangla meaning, and english definition.');
+    return;
+  }
+
+  const nextId = wordsData.length > 0 ? Math.max(...wordsData.map(w => w.id)) + 1 : 1;
+  const newWordItem = {
+    id: nextId,
+    word: word,
+    pos: pos,
+    ipa: ipa,
+    tag: tag,
+    bangla: bangla,
+    english: english,
+    mnemonic: mnemonic || `💡 Focus on the core root of ${word}.`,
+    source: 'Custom Pin',
+    ieltsTopic: 'Advanced Academic Vocabulary',
+    band6: `Common sentence with ${word}.`,
+    band8: `Sophisticated context using ${word} appropriately.`,
+    mcq: {
+      question: `What is the closest synonym of '${word}'?`,
+      options: [synonyms.split(',')[0] || 'Pertinent', 'Obsolete', 'Hostile', 'Random'],
+      answer: 0,
+      explanation: `💡 ${word} means ${bangla}.`
+    },
+    synonyms: synonyms,
+    antonyms: antonyms
+  };
+
+  wordsData.push(newWordItem);
+  saveWordsData();
+  populateDaySelector();
+  renderDailyCards();
+  renderMasterTable();
+  
+  // Jump to the newly created word's day
+  const assignedDay = Math.ceil(nextId / WORDS_PER_DAY);
+  currentDay = assignedDay;
+  localStorage.setItem(STORAGE_KEY_CURRENT_DAY, currentDay.toString());
+
+  document.getElementById('singleWordForm').reset();
+  showToast(`📌 "${word}" pinned to Day ${assignedDay}!`);
+  switchView('view-daily');
+}
+
+function handleJsonFileUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    document.getElementById('bulkJsonTextarea').value = evt.target.result;
+    showToast('File loaded into JSON editor. Click Merge to import!');
+  };
+  reader.readAsText(file);
+}
+
+function handleMergeBatchJson() {
+  const text = document.getElementById('bulkJsonTextarea').value.trim();
+  if (!text) {
+    showToast('Please paste a JSON array or upload a file first.');
+    return;
+  }
+
+  try {
+    const parsed = JSON.parse(text);
+    if (!Array.isArray(parsed)) {
+      showToast('JSON must be an array of word objects.');
+      return;
+    }
+
+    let addedCount = 0;
+    parsed.forEach(item => {
+      if (item.word && item.bangla) {
+        const nextId = wordsData.length > 0 ? Math.max(...wordsData.map(w => w.id)) + 1 : 1;
+        wordsData.push({
+          id: nextId,
+          word: (item.word || '').toUpperCase(),
+          pos: item.pos || 'adj',
+          ipa: item.ipa || '',
+          tag: item.tag || '🔥 Batch Import',
+          bangla: item.bangla || '',
+          english: item.english || '',
+          mnemonic: item.mnemonic || `💡 Focus on the root of ${item.word}.`,
+          source: item.source || 'Arifur Rahman Bank Vocabulary 2001-2021',
+          ieltsTopic: item.ieltsTopic || 'Academic Writing & Speaking',
+          band6: item.band6 || `Conventional sentence with ${item.word}.`,
+          band8: item.band8 || `Band 8.0+ collocation using ${item.word}.`,
+          mcq: item.mcq || {
+            question: `Which word is most synonymous with '${item.word}'?`,
+            options: [(item.synonyms || 'Similar').split(',')[0], 'Distorted', 'Vague', 'Trivial'],
+            answer: 0,
+            explanation: `💡 ${item.word} অর্থ ${item.bangla}।`
+          },
+          synonyms: item.synonyms || '',
+          antonyms: item.antonyms || ''
+        });
+        addedCount++;
+      }
+    });
+
+    saveWordsData();
+    populateDaySelector();
+    renderDailyCards();
+    renderMasterTable();
+    showToast(`📥 Successfully merged ${addedCount} words into database!`);
+  } catch(err) {
+    alert('Invalid JSON syntax: ' + err.message);
+  }
+}
+
+function exportFullDatabaseJson() {
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(wordsData, null, 2));
+  const dlAnchor = document.createElement('a');
+  dlAnchor.setAttribute("href", dataStr);
+  dlAnchor.setAttribute("download", `StickyVocab_900_Full_Backup_${new Date().toISOString().slice(0,10)}.json`);
+  document.body.appendChild(dlAnchor);
+  dlAnchor.click();
+  dlAnchor.remove();
+  showToast('📤 Database exported successfully!');
+}
+
+function resetToInitialSeeds() {
+  if (confirm('Are you sure you want to reset to initial seed words? Any custom additions will be reverted.')) {
+    wordsData = [...INITIAL_WORDS];
+    saveWordsData();
+    populateDaySelector();
+    renderDailyCards();
+    renderMasterTable();
+    showToast('Database reset to defaults.');
+  }
+}
+
+// Gemini API Batch Generation
+async function generateWordsWithGemini() {
+  const statusEl = document.getElementById('geminiStatusMsg');
+  const btn = document.getElementById('btnRunGeminiGen');
+  const count = parseInt(document.getElementById('geminiBatchCount').value, 10);
+  
+  let apiKey = document.getElementById('geminiApiKeyInput').value.trim();
+  if (!apiKey) {
+    apiKey = localStorage.getItem(STORAGE_KEY_GEMINI_KEY) || '';
+  }
+  if (!apiKey) {
+    apiKey = prompt("Enter your Google Gemini API Key (or configure in AI Studio Secrets):");
+    if (!apiKey) {
+      showToast('Gemini API Key required to run auto-generation.');
+      return;
+    }
+  }
+  localStorage.setItem(STORAGE_KEY_GEMINI_KEY, apiKey);
+
+  statusEl.style.display = 'block';
+  statusEl.style.color = '#7c3aed';
+  statusEl.textContent = `⏳ Contacting Gemini 2.5 Flash to synthesize ${count} Bangladesh Bank & IELTS Band 8.0+ vocabulary words...`;
+  btn.disabled = true;
+
+  const currentWordsList = wordsData.map(w => w.word).join(', ');
+
+  const promptText = `
+You are a senior lexicographer and curriculum designer for Bangladesh Bank Officer Recruitment (2001-2021 Arifur Rahman test papers) and IELTS Band 8.0+ writing/speaking.
+Generate exactly ${count} new, high-yield, non-duplicate vocabulary words that are frequently tested in Bangladesh Bank (AD, SO, Officer), Sonali, Janata, Agrani, and Pubali Bank exams.
+Do NOT repeat any of these words that are already in the database: [${currentWordsList.slice(-200)}].
+
+Return ONLY a valid JSON array of objects with the exact schema below:
+[
+  {
+    "word": "STRING in ALL CAPS (e.g. SAGACIOUS)",
+    "pos": "STRING (e.g. adj, verb, noun)",
+    "ipa": "STRING IPA pronunciation (e.g. /səˈɡeɪ.ʃəs/)",
+    "tag": "STRING authentic exam reference (e.g. 🔥 Bangladesh Bank AD '19 or 🏛️ Combined 8 Banks SO '20)",
+    "bangla": "STRING accurate Bengali meaning with nuances (e.g. দূরদর্শী; বিচক্ষণ)",
+    "english": "STRING clear concise English definition",
+    "mnemonic": "STRING high-yield brain-glue trick starting with '💡 ' and Bengali breakdown",
+    "source": "STRING (e.g. Recent Publications Bank Vocabulary)",
+    "ieltsTopic": "STRING topic header (e.g. Governance & Economic Policy)",
+    "band6": "STRING standard repetitive Band 6.0 sentence",
+    "band8": "STRING sophisticated Band 8.0+ sentence with high academic collocation",
+    "mcq": {
+      "question": "STRING bank-exam multiple choice question testing synonym, antonym, or analogy",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answer": 0, // integer index 0, 1, 2, or 3
+      "explanation": "STRING explanation starting with '💡 ব্যাখ্যাঃ '"
+    },
+    "synonyms": "STRING comma-separated 4-5 synonyms",
+    "antonyms": "STRING comma-separated 3-4 antonyms"
+  }
+]
+`;
+
+  try {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: promptText }] }],
+        generationConfig: {
+          responseMimeType: "application/json"
+        }
+      })
+    });
+
+    if (!response.ok) {
+      const errJson = await response.json();
+      throw new Error(errJson.error ? errJson.error.message : response.statusText);
+    }
+
+    const resData = await response.json();
+    const candidateText = resData.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!candidateText) throw new Error("No text content returned from Gemini API");
+
+    const newBatch = JSON.parse(candidateText);
+    if (!Array.isArray(newBatch)) throw new Error("Generated response is not a JSON array.");
+
+    let addedCount = 0;
+    newBatch.forEach(item => {
+      const nextId = wordsData.length > 0 ? Math.max(...wordsData.map(w => w.id)) + 1 : 1;
+      wordsData.push({
+        ...item,
+        id: nextId,
+        word: (item.word || '').toUpperCase()
+      });
+      addedCount++;
+    });
+
+    saveWordsData();
+    populateDaySelector();
+    renderDailyCards();
+    renderMasterTable();
+
+    statusEl.style.color = '#059669';
+    statusEl.textContent = `✨ Successfully generated and integrated ${addedCount} words into your schedule!`;
+    showToast(`🤖 Successfully generated ${addedCount} words via Gemini AI!`);
+  } catch(err) {
+    console.error(err);
+    statusEl.style.color = '#dc2626';
+    statusEl.textContent = `❌ Generation Error: ${err.message}`;
+    showToast(`Error: ${err.message}`);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// Navigation View Switcher
+function switchView(viewId) {
+  // Update view containers
+  document.querySelectorAll('.view-container').forEach(el => {
+    el.classList.toggle('active-view', el.id === viewId);
+  });
+
+  // Update desktop tabs
+  document.querySelectorAll('.desktop-nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.view === viewId);
+  });
+
+  // Update bottom nav items
+  document.querySelectorAll('.bottom-nav-item').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.view === viewId);
+  });
+
+  if (viewId === 'view-daily') renderDailyCards();
+  if (viewId === 'view-wall') renderWallCards();
+  if (viewId === 'view-list') renderMasterTable();
+  if (viewId === 'view-quiz') startNewQuizRound();
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// UI Toggles
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem(STORAGE_KEY_THEME, isDark ? 'dark' : 'light');
+  document.getElementById('btnThemeToggle').textContent = isDark ? '☀️' : '🌙';
+  showToast(isDark ? 'Cozy Dark Lamp Mode enabled' : 'Corkboard Daylight Mode enabled');
+}
+
+function togglePhoneFrame() {
+  document.body.classList.toggle('android-frame-mode');
+  const isFrame = document.body.classList.contains('android-frame-mode');
+  localStorage.setItem(STORAGE_KEY_PHONE_FRAME, isFrame ? '1' : '0');
+  showToast(isFrame ? '📱 Android Phone Frame preview enabled' : 'Full width screen enabled');
+}
+
+// Stats Modal
+function openStatsModal() {
+  const masteredIds = getMasteredIds();
+  const starredIds = getStarredIds();
+  const total = wordsData.length;
+  const pct = total > 0 ? Math.round((masteredIds.length / total) * 100) : 0;
+
+  document.getElementById('statMasteredCount').textContent = masteredIds.length;
+  document.getElementById('statStarredCount').textContent = starredIds.length;
+  document.getElementById('statCurriculumPercent').textContent = `${pct}%`;
+  document.getElementById('statProgressBar').style.width = `${pct}%`;
+  document.getElementById('statWordsTotalDesc').textContent = 
+    `${masteredIds.length} of ${Math.max(TOTAL_GOAL_WORDS, total)} Words Completed (${totalDays} Scheduled Days)`;
+
+  document.getElementById('statsModalBackdrop').classList.add('active');
+}
+
+function closeStatsModal(e) {
+  if (e.target.id === 'statsModalBackdrop') {
+    closeStatsModalDirect();
+  }
+}
+function closeStatsModalDirect() {
+  document.getElementById('statsModalBackdrop').classList.remove('active');
+}
+
+function updateMasteryBadges() {
+  const masteredIds = getMasteredIds();
+  const badge = document.getElementById('headerMasteryBadge');
+  if (badge) {
+    badge.textContent = `${masteredIds.length} / ${Math.max(TOTAL_GOAL_WORDS, wordsData.length)} ✅`;
+  }
+}
+
+// Toast
+let toastTimeout = null;
+function showToast(msg) {
+  const toast = document.getElementById('toastPopup');
+  const msgEl = document.getElementById('toastMsg');
+  if (!toast || !msgEl) return;
+  msgEl.textContent = msg;
+  toast.classList.add('show');
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2400);
+}
+
+// Helpers
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function escapeJsString(str) {
+  if (!str) return '';
+  return String(str).replace(/'/g, "\\'").replace(/"/g, '\\"');
+}
+
+// ==========================================
+// DAILY STUDY REMINDER SYSTEM (NATIVE & WEB)
+// ==========================================
+let reminderClockInterval = null;
+
+function initReminderSystem() {
+  const savedTime = localStorage.getItem(STORAGE_KEY_REMINDER_TIME) || '08:30';
+  const savedEnabled = localStorage.getItem(STORAGE_KEY_REMINDER_ENABLED) !== 'false';
+
+  const quickInput = document.getElementById('quickReminderTimeInput');
+  const modalInput = document.getElementById('reminderTimeInput');
+  const toggle = document.getElementById('reminderToggleSwitch');
+  
+  if (quickInput) quickInput.value = savedTime;
+  if (modalInput) modalInput.value = savedTime;
+  if (toggle) toggle.checked = savedEnabled;
+
+  syncReminderUI();
+  scheduleReminderNative();
+  startReminderClockInterval();
+}
+
+function syncReminderUI() {
+  const time = localStorage.getItem(STORAGE_KEY_REMINDER_TIME) || '08:30';
+  const enabled = localStorage.getItem(STORAGE_KEY_REMINDER_ENABLED) !== 'false';
+  const formatted = formatTimeAmPm(time);
+
+  const statusText = document.getElementById('reminderBarStatusText');
+  const subText = document.getElementById('reminderBarSubText');
+  const bell = document.getElementById('reminderBellIcon');
+  const quickInput = document.getElementById('quickReminderTimeInput');
+  const modalInput = document.getElementById('reminderTimeInput');
+  const toggle = document.getElementById('reminderToggleSwitch');
+
+  if (statusText) {
+    statusText.textContent = enabled ? `Daily Study Reminder: ${formatted}` : 'Daily Study Reminder: Disabled';
+  }
+  if (subText) {
+    subText.textContent = enabled 
+      ? `Fires every day at ${formatted} with your scheduled 5 words` 
+      : 'Enable reminders to get daily vocabulary push alerts';
+  }
+  if (bell) {
+    bell.textContent = enabled ? '🔔' : '🔕';
+    bell.style.opacity = enabled ? '1' : '0.5';
+  }
+  if (quickInput) {
+    quickInput.value = time;
+    quickInput.disabled = !enabled;
+    quickInput.style.opacity = enabled ? '1' : '0.5';
+  }
+  if (modalInput) {
+    modalInput.value = time;
+  }
+  if (toggle) {
+    toggle.checked = enabled;
+  }
+
+  // Update preset button active states
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.time === time);
+  });
+
+  updateReminderPreviewText();
+}
+
+function formatTimeAmPm(timeStr) {
+  if (!timeStr) return '08:30 AM';
+  const parts = timeStr.split(':');
+  let hour = parseInt(parts[0], 10);
+  const min = parts[1] || '00';
+  const ampm = hour >= 12 ? 'PM' : 'AM';
+  hour = hour % 12;
+  if (hour === 0) hour = 12;
+  const padMin = min.length < 2 ? '0' + min : min;
+  return `${hour}:${padMin} ${ampm}`;
+}
+
+function updateReminderPreviewText() {
+  const preview = document.getElementById('reminderPreviewBox');
+  if (!preview) return;
+
+  const startIndex = (currentDay - 1) * WORDS_PER_DAY;
+  const dayWords = wordsData.slice(startIndex, startIndex + WORDS_PER_DAY);
+  const wordsList = dayWords.map(w => w.word).join(', ') || 'MITIGATE, EXACERBATE...';
+
+  preview.innerHTML = `
+    <div style="font-weight: 800; color: #1e293b; margin-bottom: 2px;">
+      🔔 StickyVocab 900 • Day ${currentDay} Bank Words Ready!
+    </div>
+    <div style="font-size: 12px; color: #475569;">
+      Today's 5 Target Words: <b>${escapeHtml(wordsList)}</b>. Tap to master your daily bank exam & IELTS quota!
+    </div>
+  `;
+}
+
+function onQuickReminderTimeChange(val) {
+  if (!val) return;
+  localStorage.setItem(STORAGE_KEY_REMINDER_TIME, val);
+  syncReminderUI();
+  scheduleReminderNative();
+  showToast(`⏰ Daily reminder set to ${formatTimeAmPm(val)}`);
+}
+
+function onReminderTimeInputChange(val) {
+  if (!val) return;
+  localStorage.setItem(STORAGE_KEY_REMINDER_TIME, val);
+  syncReminderUI();
+  scheduleReminderNative();
+}
+
+function setReminderPreset(timeStr) {
+  localStorage.setItem(STORAGE_KEY_REMINDER_TIME, timeStr);
+  syncReminderUI();
+  scheduleReminderNative();
+  showToast(`⏰ Preset applied: ${formatTimeAmPm(timeStr)}`);
+}
+
+function toggleDailyReminder(checked) {
+  localStorage.setItem(STORAGE_KEY_REMINDER_ENABLED, checked ? 'true' : 'false');
+  syncReminderUI();
+  scheduleReminderNative();
+
+  if (checked) {
+    requestNotificationPermissionPrompt();
+    showToast('🔔 Daily study reminder enabled!');
+  } else {
+    showToast('🔕 Daily study reminder disabled.');
+  }
+}
+
+function requestNotificationPermissionPrompt() {
+  if (window.Android && typeof window.Android.requestNotificationPermission === 'function') {
+    window.Android.requestNotificationPermission();
+  } else if ('Notification' in window && Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+}
+
+function openReminderModal() {
+  const modal = document.getElementById('reminderModalBackdrop');
+  if (modal) {
+    syncReminderUI();
+    modal.classList.add('active');
+  }
+}
+
+function closeReminderModal(e) {
+  if (e.target.id === 'reminderModalBackdrop') {
+    closeReminderModalDirect();
+  }
+}
+
+function closeReminderModalDirect() {
+  const modal = document.getElementById('reminderModalBackdrop');
+  if (modal) {
+    modal.classList.remove('active');
+  }
+}
+
+function getDailyReminderNotificationData() {
+  const startIndex = (currentDay - 1) * WORDS_PER_DAY;
+  const dayWords = wordsData.slice(startIndex, startIndex + WORDS_PER_DAY);
+  const wordsList = dayWords.map(w => w.word).join(', ') || 'Top Bank Exam Vocabulary';
+  return {
+    title: `🔔 Day ${currentDay} of 180: Study Your 5 Bank Words!`,
+    message: `Today's quota: ${wordsList}. Master them now for Bangladesh Bank & IELTS!`
+  };
+}
+
+function scheduleReminderNative() {
+  const timeStr = localStorage.getItem(STORAGE_KEY_REMINDER_TIME) || '08:30';
+  const enabled = localStorage.getItem(STORAGE_KEY_REMINDER_ENABLED) !== 'false';
+  const parts = timeStr.split(':');
+  const hour = parseInt(parts[0], 10) || 8;
+  const minute = parseInt(parts[1], 10) || 30;
+
+  const notif = getDailyReminderNotificationData();
+
+  if (window.Android && typeof window.Android.scheduleDailyReminder === 'function') {
+    try {
+      window.Android.scheduleDailyReminder(hour, minute, enabled, notif.title, notif.message);
+    } catch(err) {
+      console.warn('Android bridge error:', err);
+    }
+  }
+}
+
+function triggerTestReminderNotification() {
+  const notif = getDailyReminderNotificationData();
+
+  // 1. Native Android notification via bridge
+  let firedNative = false;
+  if (window.Android && typeof window.Android.testNotification === 'function') {
+    try {
+      window.Android.testNotification(notif.title, notif.message);
+      firedNative = true;
+    } catch(err) {
+      console.warn('Android bridge error:', err);
+    }
+  }
+
+  // 2. Web Notifications API
+  let firedWeb = false;
+  if ('Notification' in window) {
+    if (Notification.permission === 'granted') {
+      try {
+        new Notification(notif.title, {
+          body: notif.message
+        });
+        firedWeb = true;
+      } catch(e) {
+        console.warn('Web notification error:', e);
+      }
+    } else if (Notification.permission !== 'denied') {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          new Notification(notif.title, { body: notif.message });
+        }
+      });
+    }
+  }
+
+  showToast(`🔔 Test reminder dispatched! (${firedNative ? 'Native Android' : (firedWeb ? 'Web Push' : 'In-App Alert')})`);
+}
+
+function startReminderClockInterval() {
+  if (reminderClockInterval) clearInterval(reminderClockInterval);
+  // Check every 30 seconds for in-app trigger
+  reminderClockInterval = setInterval(checkAndFireInAppReminder, 30000);
+}
+
+function checkAndFireInAppReminder() {
+  const enabled = localStorage.getItem(STORAGE_KEY_REMINDER_ENABLED) !== 'false';
+  if (!enabled) return;
+
+  const timeStr = localStorage.getItem(STORAGE_KEY_REMINDER_TIME) || '08:30';
+  const parts = timeStr.split(':');
+  const targetHour = parseInt(parts[0], 10);
+  const targetMin = parseInt(parts[1], 10);
+
+  const now = new Date();
+  const todayKey = now.toISOString().slice(0, 10);
+  const lastFired = localStorage.getItem(STORAGE_KEY_LAST_REMINDER_DATE);
+
+  if (now.getHours() === targetHour && now.getMinutes() === targetMin && lastFired !== todayKey) {
+    localStorage.setItem(STORAGE_KEY_LAST_REMINDER_DATE, todayKey);
+    triggerTestReminderNotification();
+  }
+}
+
+// App Initialization
+window.addEventListener('DOMContentLoaded', () => {
+  // Theme initialization
+  const savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('btnThemeToggle').textContent = '☀️';
+  }
+
+  const savedFrame = localStorage.getItem(STORAGE_KEY_PHONE_FRAME);
+  if (savedFrame === '1') {
+    document.body.classList.add('android-frame-mode');
+  }
+
+  loadWordsData();
+  populateDaySelector();
+  updateMasteryBadges();
+  renderDailyCards();
+  initReminderSystem();
+});
+</script>
+
+</body>
+</html>
